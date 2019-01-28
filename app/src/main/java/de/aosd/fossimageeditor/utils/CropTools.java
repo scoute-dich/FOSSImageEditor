@@ -20,6 +20,8 @@ import android.app.Activity;
 import android.net.Uri;
 import android.support.design.widget.BottomSheetDialog;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.theartofdev.edmodo.cropper.CropImage;
@@ -36,6 +38,45 @@ public class CropTools {
 
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(context);
         View dialogView = View.inflate(context, R.layout.dialog_crop, null);
+
+        LinearLayout crop_custom = dialogView.findViewById(R.id.crop_custom);
+        crop_custom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                bottomSheetDialog.cancel();
+
+                final BottomSheetDialog bottomSheetDialog_custom = new BottomSheetDialog(context);
+                View dialogView = View.inflate(context, R.layout.dialog_crop_custom, null);
+                final EditText dialog_width = dialogView.findViewById(R.id.dialog_width);
+                final EditText dialog_high = dialogView.findViewById(R.id.dialog_high);
+
+                Button action_ok = dialogView.findViewById(R.id.action_ok);
+                action_ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        int width = Integer.parseInt(dialog_width.getText().toString());
+                        int high = Integer.parseInt(dialog_high.getText().toString());
+
+                        CropImage.activity(external)
+                                .setBorderCornerColor(context.getResources().getColor(R.color.colorAccent))
+                                .setAspectRatio(width, high)
+                                .start(context);
+                        bottomSheetDialog_custom.cancel();
+
+                    }
+                });
+                Button action_cancel = dialogView.findViewById(R.id.action_cancel);
+                action_cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        bottomSheetDialog_custom.cancel();
+                    }
+                });
+                bottomSheetDialog_custom.setContentView(dialogView);
+                bottomSheetDialog_custom.show();
+            }
+        });
 
         LinearLayout crop_free = dialogView.findViewById(R.id.crop_free);
         crop_free.setOnClickListener(new View.OnClickListener() {

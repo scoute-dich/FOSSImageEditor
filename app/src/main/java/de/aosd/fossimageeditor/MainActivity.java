@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -364,7 +365,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             try {
 
                 path = FileUtil.getPath(context, uriSource);
-                extension = path.substring(path.lastIndexOf("."));
+                extension = path.substring(Objects.requireNonNull(path).lastIndexOf("."));
                 fileName = date + extension;
                 sourceImage = new File(path);
 
@@ -391,7 +392,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             if(resultCode == TextOnImage.TEXT_ON_IMAGE_RESULT_OK_CODE) {
                 uriSource = Uri.parse(data.getStringExtra(TextOnImage.IMAGE_OUT_URI));
 
-                File outputFile = new File(uriSource.getPath());
+                File outputFile = new File(Objects.requireNonNull(uriSource.getPath()));
                 FileUtil.copyFile(activity, outputFile, editedImage);
                 outputFile.delete();
                 mGPUImageView.setImage(editedImage);
@@ -408,7 +409,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             if (resultCode == RESULT_OK) {
                 uriSource = result.getUri();
 
-                File outputFile = new File(uriSource.getPath());
+                File outputFile = new File(Objects.requireNonNull(uriSource.getPath()));
                 FileUtil.copyFile(activity, outputFile, editedImage);
                 outputFile.delete();
                 mGPUImageView.setImage(editedImage);
@@ -422,7 +423,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         if (requestCode == REQUEST_CODE_PICK_IMAGE) {
             if (resultCode == RESULT_OK) {
                 uriSource = data.getData();
-                sourceImage = new File(Objects.requireNonNull(uriSource).getPath());
+                sourceImage = new File(Objects.requireNonNull(Objects.requireNonNull(uriSource).getPath()));
                 handleImage();
             }
         }
@@ -463,6 +464,18 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
+        if (id == R.id.action_about_hide) {
+            PackageManager p = getPackageManager();
+            ComponentName componentName = new ComponentName(this, StartActivity.class); // activity which is first time open in manifiest file which is declare as <category android:name="android.intent.category.LAUNCHER" />
+
+            if (p.getComponentEnabledSetting(componentName) == PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
+                p.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
+            } else {
+                p.setComponentEnabledSetting(componentName,PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+            }
+            return true;
+        }
 
         if (id == R.id.action_edit) {
             GPUImageFilterTools.showDialog(activity, new GPUImageFilterTools.OnGpuImageFilterChosenListener() {

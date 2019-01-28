@@ -42,6 +42,9 @@
             <item
                 android:id="@+id/action_about_help"
                 android:title="@string/action_about_help" />
+            <item
+                android:id="@+id/action_about_hide"
+                android:title="@string/action_hide" />
         </menu>
     </item>
 

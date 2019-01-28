@@ -4,7 +4,7 @@
 
     // Menu
 
-    <string name="action_about">Über</string>
+    <string name="action_about">Mehr</string>
     <string name="action_about_license">Lizenz</string>
     <string name="action_about_contribute">Mitmachen</string>
     <string name="action_about_help">Hilfe</string>
@@ -17,6 +17,7 @@
     <string name="action_text">Text hinzufügen</string>
     <string name="action_save">Speichern</string>
     <string name="action_pick">Bild auswählen</string>
+    <string name="action_hide">Verstecke | Zeige Launcher Icon</string>
 
     // Filter
 
@@ -46,6 +47,7 @@
     // Crop
 
     <string name="crop_free">Frei</string>
+    <string name="crop_custom">Eigenes</string>
     <string name="crop_11">1:1</string>
     <string name="crop_43">4:3</string>
     <string name="crop_169">16:9</string>
@@ -57,7 +59,6 @@
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">Abbrechen</string>
     <string name="dialog_share">Teile mit:</string>
-    <string name="dialog_load">Bitte zuerst ein Bild auswählen.</string>
     <string name="dialog_wait">Bitte warte einen Moment.</string>
 
     <string name="dialog_save">Dies wird das Originalbild ersetzen und das bearbeitete Bild löschen.
@@ -66,6 +67,8 @@
     <string name="dialog_save_not">Konnte Bild nicht speichern.</string>
     <string name="dialog_load_not">Konnte Bild nicht laden.</string>
     <string name="dialog_text_hint">Text eingeben:</string>
+    <string name="dialog_high_hint">Höhe:</string>
+    <string name="dialog_width_hint">Breite:</string>
 
     <string name="dialog_permission">\"FOSS Bildbearbeitung\" benötigt die Berechtigung \"SD-Karteninhalte lesen und schreiben\".
         Dies ist nötig, um die bearbeiteten Bilder speichern zu können. Bitte gewähre die Berechtigung im nächsten Dialog.</string>
@@ -145,8 +148,7 @@
         \u25AA \"FOSS Bildbearbeitung\" kann auch als Standardbildbearbeitung von anderen Apps gestartet werden.&lt;br>&lt;br>
 
         &lt;b>Bilder speichern&lt;/b>&lt;br>
-        \u25AA Jedes mal, wenn du ein Bild veränderst musst du es speichern, indem du den \"Bestätigungsknopf\" drückst.
-        Alle Bilder werden im \"FOSS_ImageEditor\" Ordner deiner SD-Karte gespeichert.&lt;br>
+        \u25AA Wenn du mit bearbeiten fertig bist, speichere dein Bild. Alle Bilder werden im \"FOSS_ImageEditor\" Ordner deiner SD-Karte gespeichert.&lt;br>
         \u25AA Du kannst das Originalbild überschreiben. Dies wird auch das bearbeitete Bild im \"FOSS_ImageEditor\" Ordner löschen.&lt;br>&lt;br>
 
         &lt;b>Text hinzufügen&lt;/b>&lt;br>
