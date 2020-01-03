@@ -1,14 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 29
+    buildToolsVersion '28.0.3'
+
     defaultConfig {
         applicationId "de.aosd.fossimageeditor"
-        minSdkVersion 21
-        targetSdkVersion 27
+        vectorDrawables.useSupportLibrary = true
+        minSdkVersion 29
+        targetSdkVersion 29
         versionCode 2
         versionName "0.2"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -19,10 +22,12 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
-    implementation 'com.android.support:cardview-v7:27.1.1'
-    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
-    implementation 'com.github.sarthakdoshi04:text-on-image:0.1.0'
-    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'jp.co.cyberagent.android:gpuimage:2.0.4'
+    implementation 'cat.ereza:customactivityoncrash:2.2.0'
+    compile 'com.klinkerapps:badged_imageview:1.0.5'
+    implementation 'com.github.QuadFlask:colorpicker:0.0.15'
 }

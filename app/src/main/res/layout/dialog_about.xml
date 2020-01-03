@@ -1,32 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    android:layout_width="wrap_content"
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ContentDescription">
 
-    <TextView
-        android:id="@+id/dialog_about_title"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|center_horizontal"
         android:padding="16dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textStyle="bold" />
+        android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button_launcherIcon"
+            android:layout_margin="16dp"
+            android:text="@string/action_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+
+        <ImageView
+            android:layout_margin="16dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@drawable/icon_help" />
 
         <TextView
-            android:id="@+id/dialog_about_text"
+            android:textStyle="bold"
+            android:text="@string/action_about_help"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
-    </ScrollView>
+        <TextView
+            android:id="@+id/about_help_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
-</LinearLayout>
+        <ImageView
+            android:layout_margin="16dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@drawable/icon_cont"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:text="@string/action_about_contribute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <TextView
+            android:id="@+id/about_cont_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+        <ImageView
+            android:layout_margin="16dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@drawable/icon_license"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:text="@string/action_about_license"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <TextView
+            android:id="@+id/about_license_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+    </LinearLayout>
+
+</ScrollView>

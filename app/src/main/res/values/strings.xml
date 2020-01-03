@@ -3,20 +3,12 @@
 
     // Menu
 
-    <string name="action_about">More</string>
     <string name="action_about_license">License</string>
     <string name="action_about_contribute">Contribute</string>
     <string name="action_about_help">Help</string>
     <string name="action_adjust">Adjust</string>
     <string name="action_filter">Filter</string>
-    <string name="action_crop">Crop</string>
-    <string name="action_art">Artwork</string>
-    <string name="action_overwrite">Overwrite original</string>
-    <string name="action_share">Share</string>
-    <string name="action_text">Add text</string>
-    <string name="action_save">Save</string>
-    <string name="action_pick">Pick image</string>
-    <string name="action_hide">Hide | Show launcher icon</string>
+    <string name="action_hide">Hide launcher icon</string>
 
     // Filter
 
@@ -27,41 +19,26 @@
     <string name="filter_hue">HUE</string>
     <string name="filter_gamma">Gamma</string>
     <string name="filter_colorBalance">Color Balance</string>
-    <string name="filter_sepia">Sepia</string>
-    <string name="filter_monochrome">Monochrome</string>
+    <string name="filter_monochrome">Sepia</string>
     <string name="filter_rgb">RGB</string>
     <string name="filter_haze">Haze</string>
     <string name="filter_vignette">Vignette</string>
     <string name="filter_blur">Blur</string>
     <string name="filter_sharpen">Sharpen</string>
     <string name="filter_toon">Cartoon</string>
-    <string name="filter_cross">Crosshatch</string>
     <string name="filter_poster">Poster</string>
-    <string name="filter_suppress">Suppress non maximum</string>
-    <string name="filter_weakPixel">Weak pixel inclusion</string>
     <string name="filter_halftone">Halftone</string>
     <string name="filter_invert">Invert</string>
     <string name="filter_pixelation">Pixel</string>
 
     // Crop
 
-    <string name="crop_free">Free</string>
-    <string name="crop_custom">Custom</string>
-    <string name="crop_11">1:1</string>
-    <string name="crop_43">4:3</string>
-    <string name="crop_169">16:9</string>
-    <string name="crop_34">3:4</string>
-    <string name="crop_916">9:16</string>
-
     // Dialog
 
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">Cancel</string>
-    <string name="dialog_share">Share using:</string>
-    <string name="dialog_wait">Please wait a moment.</string>
+    <string name="dialog_color">Choose a color</string>
 
-    <string name="dialog_save">This will overwrite the original image and delete the edited image.
-        This will cause a loose of quality. Proceed?</string>
     <string name="dialog_save_ok">Image saved.</string>
     <string name="dialog_save_not">Could not save image.</string>
     <string name="dialog_load_not">Could not load image.</string>
@@ -69,14 +46,8 @@
     <string name="dialog_high_hint">High:</string>
     <string name="dialog_width_hint">Width:</string>
 
-    <string name="dialog_permission">\"FOSS Image Editor\" needs the permission to \"read and write on your storage\". This
-        is needed to save the edited images on you SD card. Please grant the permission on the following dialog.</string>
-
-    <string name="dialog_permission_not">As said: the permission is needed. The app will not work.</string>
-
     // About dialogs
 
-    <string name="about_license_title">Copyright © 2018 by Gaukler Faun</string>
     <string name="about_license_dialog">
         &lt;i>For more information visit the project site on Github: https://github.com/scoute-dich/FOSSImageEditor&lt;/i>&lt;br>&lt;br>
 
@@ -95,31 +66,33 @@
 
         &lt;i>Following open source libraries or projects are used within this software:&lt;/i>&lt;br>&lt;br>
 
+        &lt;b>Android-BadgedImageView&lt;/b>&lt;br>
+        MIT License&lt;br>
+        &lt;i>https://github.com/klinker24/Android-BadgedImageView&lt;/i>&lt;br>&lt;br>
+
         &lt;b>Android Image Cropper&lt;/b>&lt;br>
         Apache License Version 2.0&lt;br>
-        ArthurHub&lt;br>
         &lt;i>https://github.com/ArthurHub/Android-Image-Cropper&lt;/i>&lt;br>&lt;br>
+
+        &lt;b>ColorPicker&lt;/b>&lt;br>
+        Apache License 2.0&lt;br>
+        &lt;i>https://github.com/QuadFlask/colorpicker&lt;/i>&lt;br>&lt;br>
+
+        &lt;b>CustomActivityOnCrash&lt;/b>&lt;br>
+        Apache License 2.0&lt;br>
+        &lt;i>https://github.com/Ereza/CustomActivityOnCrash&lt;/i>&lt;br>&lt;br>
 
         &lt;b>GpuImage for Android&lt;/b>&lt;br>
         Apache License Version 2.0&lt;br>
-        CyberAgent&lt;br>
         &lt;i>https://github.com/CyberAgent/android-gpuimage&lt;/i>&lt;br>&lt;br>
 
         &lt;b>Material Design Icons&lt;/b>&lt;br>
         SIL Open Font License, Version 1.1.&lt;br>
-        Templarian&lt;br>
         &lt;i>https://github.com/Templarian/MaterialDesign&lt;/i>&lt;br>&lt;br>
 
-        &lt;b>Text on image&lt;/b>&lt;br>
-        Apache License Version 2.0&lt;br>
-        SarthakDoshi04&lt;br>
-        &lt;i>https://github.com/SarthakDoshi04/text-on-image&lt;/i>&lt;br>&lt;br>
-
-        &lt;b>Farbenkreis zur Symbolisierung des menschlichen Geistes- und Seelenlebens&lt;/b>&lt;br>
-        Public Domain&lt;br>
-        Original uploader was the user Luestling on Wikipedia in German - Transferred from de.wikipedia
-        to Commons by Andrei Stroe using the CommonsHelper.&lt;br>
-        &lt;i>https://commons.wikimedia.org/w/index.php?curid=6011583&lt;/i>
+        &lt;b>Woman 001&lt;/b>&lt;br>
+        Open Domain&lt;br>
+        &lt;i>https://www.flickr.com/photos/153447606@N05/33965207055/&lt;/i>
 
     </string>
 
@@ -146,20 +119,8 @@
     </string>
 
     <string name="about_help_dialog">
-        &lt;b>Loading images&lt;/b>&lt;br>
-        \u25AA Using the menu \"Pick image\" will launch your Gallery, where you can pick an image.&lt;br>
-        \u25AA You can share pictures from any app to \"FOSS Image Editor\".&lt;br>
-        \u25AA \"FOSS Image Editor\" can also be launched as default image editor from other apps.&lt;br>&lt;br>
-
-        &lt;b>Saving images&lt;/b>&lt;br>
-        \u25AA Save your image after applying all wanted filters. All images will be
-        stored in the \"FOSS_ImageEditor\" directory inside your default \"Pictures\" folder.&lt;br>
-        \u25AA You can overwrite the original image. This will also delete the image inside the \"FOSS_ImageEditor\"
-        directory.&lt;br>&lt;br>
-
-        &lt;b>Add text&lt;/b>&lt;br>
-        Enter text and press the \"OK\" button. On the next screen you can resize and rotate the text with two finger
-        gestures or change the color. When finished press the \"SET\" button.
+        &lt;b>FOSS Image Editor can only open pictures stored inthe public folders (DCIM, PICTURES, DOWNLOADS, …). All other pictures can not be opened.
+            But FOSS Image Editor needs no permissions&lt;/b>
     </string>
 
 </resources>

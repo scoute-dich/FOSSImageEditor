@@ -1,5 +1,7 @@
 #### Changelog
 
+
+
 ### v 0.3:
 - new: hide app icon
 - new: custom crop width and high

@@ -4,20 +4,12 @@
 
     // Menu
 
-    <string name="action_about">Mehr</string>
     <string name="action_about_license">Lizenz</string>
     <string name="action_about_contribute">Mitmachen</string>
     <string name="action_about_help">Hilfe</string>
     <string name="action_adjust">Verbessern</string>
     <string name="action_filter">Filter</string>
-    <string name="action_crop">Zuschneiden</string>
-    <string name="action_art">Kunst</string>
-    <string name="action_overwrite">Original überschreiben</string>
-    <string name="action_share">Teilen</string>
-    <string name="action_text">Text hinzufügen</string>
-    <string name="action_save">Speichern</string>
-    <string name="action_pick">Bild auswählen</string>
-    <string name="action_hide">Verstecke | Zeige Launcher Icon</string>
+    <string name="action_hide">Verstecke Launchericon</string>
 
     // Filter
 
@@ -28,41 +20,26 @@
     <string name="filter_hue">HUE</string>
     <string name="filter_gamma">Gamma</string>
     <string name="filter_colorBalance">Farbausgleich</string>
-    <string name="filter_sepia">Sepia</string>
-    <string name="filter_monochrome">Monochrome</string>
+    <string name="filter_monochrome">Sepia</string>
     <string name="filter_rgb">RGB</string>
     <string name="filter_haze">Haze</string>
     <string name="filter_vignette">Vignette</string>
     <string name="filter_blur">Blur</string>
     <string name="filter_sharpen">Schärfen</string>
     <string name="filter_toon">Cartoon</string>
-    <string name="filter_cross">Crosshatch</string>
     <string name="filter_poster">Poster</string>
-    <string name="filter_suppress">Unterdrücke nicht Maximum</string>
-    <string name="filter_weakPixel">Schwache Pixel einschließen</string>
     <string name="filter_halftone">Halbton</string>
     <string name="filter_invert">Invert</string>
     <string name="filter_pixelation">Pixel</string>
 
     // Crop
 
-    <string name="crop_free">Frei</string>
-    <string name="crop_custom">Eigenes</string>
-    <string name="crop_11">1:1</string>
-    <string name="crop_43">4:3</string>
-    <string name="crop_169">16:9</string>
-    <string name="crop_34">3:4</string>
-    <string name="crop_916">9:16</string>
-
     // Dialog
 
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">Abbrechen</string>
-    <string name="dialog_share">Teile mit:</string>
-    <string name="dialog_wait">Bitte warte einen Moment.</string>
+    <string name="dialog_color">Farbe auswählen</string>
 
-    <string name="dialog_save">Dies wird das Originalbild ersetzen und das bearbeitete Bild löschen.
-        Dabei kommt es zu einem Qualitätsverlust. Fortfahren?</string>
     <string name="dialog_save_ok">Bild gespeichert.</string>
     <string name="dialog_save_not">Konnte Bild nicht speichern.</string>
     <string name="dialog_load_not">Konnte Bild nicht laden.</string>
@@ -70,16 +47,10 @@
     <string name="dialog_high_hint">Höhe:</string>
     <string name="dialog_width_hint">Breite:</string>
 
-    <string name="dialog_permission">\"FOSS Bildbearbeitung\" benötigt die Berechtigung \"SD-Karteninhalte lesen und schreiben\".
-        Dies ist nötig, um die bearbeiteten Bilder speichern zu können. Bitte gewähre die Berechtigung im nächsten Dialog.</string>
-
-    <string name="dialog_permission_not">Wie gesagt: Die Berechtigung wird gebraucht. Die App wird nicht funktionieren.</string>
-
     // About dialogs
 
-    <string name="about_license_title">Copyright © 2018 by Gaukler Faun</string>
     <string name="about_license_dialog">
-        Besuche für mehr Informationen die Projektseite auf Github: https://github.com/scoute-dich/FOSSImageEditor&lt;br>&lt;br>
+        &lt;i>Besuche für mehr Informationen die Projektseite auf Github: https://github.com/scoute-dich/FOSSImageEditor&lt;/i>&lt;br>&lt;br>
 
         Dieses Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public License, wie von
         der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 3 der Lizenz oder
@@ -91,31 +62,33 @@
 
         &lt;i>Die folgenden Open Source Bibliotheken oder Projekte werden in dieser Software verwendet:&lt;/i>&lt;br>&lt;br>
 
+        &lt;b>Android-BadgedImageView&lt;/b>&lt;br>
+        MIT License&lt;br>
+        &lt;i>https://github.com/klinker24/Android-BadgedImageView&lt;/i>&lt;br>&lt;br>
+
         &lt;b>Android Image Cropper&lt;/b>&lt;br>
         Apache License Version 2.0&lt;br>
-        ArthurHub&lt;br>
         &lt;i>https://github.com/ArthurHub/Android-Image-Cropper&lt;/i>&lt;br>&lt;br>
+
+        &lt;b>ColorPicker&lt;/b>&lt;br>
+        Apache License 2.0&lt;br>
+        &lt;i>https://github.com/QuadFlask/colorpicker&lt;/i>&lt;br>&lt;br>
+
+        &lt;b>CustomActivityOnCrash&lt;/b>&lt;br>
+        Apache License 2.0&lt;br>
+        &lt;i>https://github.com/Ereza/CustomActivityOnCrash&lt;/i>&lt;br>&lt;br>
 
         &lt;b>GpuImage for Android&lt;/b>&lt;br>
         Apache License Version 2.0&lt;br>
-        CyberAgent&lt;br>
         &lt;i>https://github.com/CyberAgent/android-gpuimage&lt;/i>&lt;br>&lt;br>
 
         &lt;b>Material Design Icons&lt;/b>&lt;br>
         SIL Open Font License, Version 1.1.&lt;br>
-        Templarian&lt;br>
         &lt;i>https://github.com/Templarian/MaterialDesign&lt;/i>&lt;br>&lt;br>
 
-        &lt;b>Text on image&lt;/b>&lt;br>
-        Apache License Version 2.0&lt;br>
-        SarthakDoshi04&lt;br>
-        &lt;i>https://github.com/SarthakDoshi04/text-on-image&lt;/i>&lt;br>&lt;br>
-
-        &lt;b>Farbenkreis zur Symbolisierung des menschlichen Geistes- und Seelenlebens&lt;/b>&lt;br>
+        &lt;b>Woman 001&lt;/b>&lt;br>
         Gemeinfrei&lt;br>
-        Der ursprünglich hochladende Benutzer war Luestling in der Wikipedia auf Deutsch - Übertragen aus de.wikipedia
-        nach Commons durch Andrei Stroe mithilfe des CommonsHelper.&lt;br>
-        &lt;i>https://commons.wikimedia.org/w/index.php?curid=6011583&lt;/i>
+        &lt;i>https://www.flickr.com/photos/153447606@N05/33965207055/&lt;/i>
 
     </string>
 
@@ -142,18 +115,8 @@
     </string>
 
     <string name="about_help_dialog">
-        &lt;b>Bilder laden&lt;/b>&lt;br>
-        \u25AA Über das Menü \"Bild aussuchen\" wird deine Galerie gestarted, wo du ein Bid auswählen kannst.&lt;br>
-        \u25AA Du kannst Bilder aus anderen Apps mit \"FOSS Bildbearbeitung\" teilen.&lt;br>
-        \u25AA \"FOSS Bildbearbeitung\" kann auch als Standardbildbearbeitung von anderen Apps gestartet werden.&lt;br>&lt;br>
-
-        &lt;b>Bilder speichern&lt;/b>&lt;br>
-        \u25AA Wenn du mit bearbeiten fertig bist, speichere dein Bild. Alle Bilder werden im \"FOSS_ImageEditor\" Ordner deiner SD-Karte gespeichert.&lt;br>
-        \u25AA Du kannst das Originalbild überschreiben. Dies wird auch das bearbeitete Bild im \"FOSS_ImageEditor\" Ordner löschen.&lt;br>&lt;br>
-
-        &lt;b>Text hinzufügen&lt;/b>&lt;br>
-        Gib den Text ein und drücke den \"OK\" Knopf. Auf dem nächsten Schirm kannst du durch \"Zwei-Finger-Gesten\" den Text
-        vergrößern oder drehen. Du kannst auch die Farbe ändern. Wenn du fertig bist, drücke den \"SET\" Knopf.
+        &lt;b>FOSS Bildbearbeitung kann nur Bilder laden welche in den öffentlichen Ordnern (DCIM, PICTURES, DOWNLOADS, …) gespeichert sind.
+        Alle anderen Bilder können nicht geladen werden. Dafür kommt  FOSS Bildbearbeitung komplett ohne Berechtigungen aus.&lt;/b>
     </string>
 
 </resources>

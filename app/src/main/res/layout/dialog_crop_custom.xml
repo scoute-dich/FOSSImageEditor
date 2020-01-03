@@ -3,49 +3,58 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:minHeight="56dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="?android:attr/colorBackground"
     android:layout_alignParentBottom="true"
     tools:ignore="Overdraw">
 
-    <android.support.design.widget.TextInputLayout
+    <LinearLayout
+        android:baselineAligned="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp" >
+        android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/dialog_width"
-            android:selectAllOnFocus="true"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:imeOptions="actionNext"
-            android:inputType="number"
-            android:hint="@string/dialog_width_hint"
-            android:importantForAutofill="no"
-            tools:targetApi="o" />
+            android:padding="16dp" >
 
-    </android.support.design.widget.TextInputLayout>
+            <EditText
+                android:id="@+id/dialog_width"
+                android:selectAllOnFocus="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:hint="@string/dialog_width_hint"
+                android:importantForAutofill="no"
+                tools:targetApi="o" />
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp" >
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/dialog_high"
-            android:selectAllOnFocus="true"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:imeOptions="actionDone"
-            android:inputType="number"
-            android:hint="@string/dialog_high_hint"
-            android:importantForAutofill="no"
-            tools:targetApi="o" />
+            android:padding="16dp" >
 
-    </android.support.design.widget.TextInputLayout>
+            <EditText
+                android:id="@+id/dialog_high"
+                android:selectAllOnFocus="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:hint="@string/dialog_high_hint"
+                android:importantForAutofill="no"
+                tools:targetApi="o" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"

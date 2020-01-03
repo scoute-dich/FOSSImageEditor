@@ -1,53 +1,348 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     tools:ignore="ContentDescription"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animateLayoutChanges="true">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.design.widget.AppBarLayout
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/textBar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:minHeight="112dp">
+
+        <View
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/shadow_below"/>
+
+        <EditText
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/dialog_text"
+            android:selectAllOnFocus="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:inputType="textAutoCorrect"
+            android:hint="@string/dialog_text_hint"
+            android:importantForAutofill="no"
+            tools:targetApi="o" />
+
+        <LinearLayout
+            android:id="@+id/textToolsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:minHeight="56dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:id="@+id/button_color"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/icon_color" />
+
+            <ImageButton
+                android:id="@+id/button_position"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/icon_position" />
+
+            <ImageButton
+                android:id="@+id/button_textApply_not"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/action_cancel" />
+
+            <ImageButton
+                android:id="@+id/button_textApply"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/action_check" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/textPositionLayout"
+            android:visibility="invisible"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:minHeight="56dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:id="@+id/position_topLeft"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/icon_top_left" />
+
+            <ImageButton
+                android:id="@+id/position_topRight"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/icon_top_right" />
+
+            <ImageButton
+                android:id="@+id/position_bottomLeft"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/icon_bottom_left" />
+
+            <ImageButton
+                android:id="@+id/button_bottomRight"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/icon_bottom_right" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/cropBar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:minHeight="112dp">
+
+        <View
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/shadow_below"/>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:minHeight="56dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_1_1"
+                    android:text="1:1"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    tools:ignore="ButtonStyle,HardcodedText" />
+
+
+                <Button
+                    android:id="@+id/button_4_3"
+                    android:text="4:3"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    tools:ignore="ButtonStyle,HardcodedText" />
+
+                <Button
+                    android:id="@+id/button_3_4"
+                    android:text="3:4"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    android:src="@drawable/action_adjust"
+                    tools:ignore="ButtonStyle,HardcodedText" />
+
+                <Button
+                    android:id="@+id/button_16_9"
+                    android:text="16:9"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    tools:ignore="ButtonStyle,HardcodedText" />
+
+                <Button
+                    android:id="@+id/button_9_16"
+                    android:text="9:16"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    tools:ignore="ButtonStyle,HardcodedText" />
+
+                <Button
+                    android:id="@+id/button_custom"
+                    android:text="x:x"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    tools:ignore="ButtonStyle,HardcodedText" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:minHeight="56dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/button_right"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    android:src="@drawable/icon_right" />
+
+
+                <ImageButton
+                    android:id="@+id/button_left"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    android:src="@drawable/icon_left" />
+
+                <ImageButton
+                    android:id="@+id/button_horizontal"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    android:src="@drawable/icon_horizontal" />
+
+                <ImageButton
+                    android:id="@+id/button_vertical"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    android:src="@drawable/icon_vertical" />
+
+                <ImageButton
+                    android:id="@+id/button_apply_not"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    android:src="@drawable/action_cancel" />
+
+                <ImageButton
+                    android:id="@+id/button_apply"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/actionBarItemBackground"
+                    android:src="@drawable/action_check" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/appbar"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="112dp"
+        android:minHeight="112dp">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <View
+            android:layout_alignParentTop="true"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <RelativeLayout
-        android:layout_above="@+id/appbar"
-        android:background="@android:color/black"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <jp.co.cyberagent.android.gpuimage.GPUImageView
-            android:layout_margin="@dimen/fab_margin"
-            android:id="@+id/gpuImage"
-            android:layout_gravity="center"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginBottom="@dimen/fab_margin"
-            android:layout_above="@+id/seekBarLayout"/>
+            android:layout_height="4dp"
+            android:background="@drawable/shadow_below"/>
 
         <RelativeLayout
-            android:id="@+id/seekBarLayout"
-            android:layout_alignParentBottom="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_above="@+id/buttonsLayout"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:minHeight="56dp">
 
             <ImageButton
-                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/filterApply"
                 android:id="@+id/filterCancel"
                 android:layout_width="42dp"
                 android:layout_height="match_parent"
@@ -59,11 +354,10 @@
 
             <SeekBar
                 android:id="@+id/seekBar"
-                android:layout_toStartOf="@+id/filterApply"
-                android:layout_toEndOf="@+id/filterCancel"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/filterCancel"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:background="@android:color/black"
                 android:max="100" />
 
             <ImageButton
@@ -77,10 +371,142 @@
                 android:background="?attr/actionBarItemBackground"
                 android:src="@drawable/action_check"/>
 
-
         </RelativeLayout>
 
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:minHeight="56dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
 
+            <ImageButton
+                android:id="@+id/button_edit"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/action_adjust" />
+
+            <ImageButton
+                android:id="@+id/button_crop"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/action_crop" />
+
+            <ImageButton
+                android:id="@+id/button_text"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/icon_text" />
+
+            <ImageButton
+                android:id="@+id/button_save"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/icon_save" />
+
+            <ImageButton
+                android:id="@+id/button_open"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/icon_open" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/appbar">
+
+        <com.theartofdev.edmodo.cropper.CropImageView
+            custom:cropGuidelinesColor="@color/colorAccent"
+            android:layout_margin="12dp"
+            android:id="@+id/cropImageView"
+            android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+        <jp.co.cyberagent.android.gpuimage.GPUImageView
+            android:layout_margin="12dp"
+            android:id="@+id/gpuImage"
+            android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/badged_iv_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <com.klinker.android.badged_imageview.BadgedImageView
+                android:visibility="invisible"
+                android:id="@+id/badged_iv_bottom_start"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:badgeGravity="bottom|start"
+                app:badgePadding="4dp"/>
+
+            <com.klinker.android.badged_imageview.BadgedImageView
+                android:visibility="invisible"
+                android:id="@+id/badged_iv_bottom_end"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:badgeGravity="bottom|end"
+                app:badgePadding="4dp"/>
+
+            <com.klinker.android.badged_imageview.BadgedImageView
+                android:visibility="invisible"
+                android:id="@+id/badged_iv_top_start"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:badgeGravity="top|start"
+                app:badgePadding="4dp"/>
+
+            <com.klinker.android.badged_imageview.BadgedImageView
+                android:visibility="invisible"
+                android:id="@+id/badged_iv_top_end"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:badgeGravity="top|end"
+                app:badgePadding="4dp"/>
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

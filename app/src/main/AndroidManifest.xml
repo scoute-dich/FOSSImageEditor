@@ -5,8 +5,6 @@
     package="de.aosd.fossimageeditor"
     tools:ignore="GoogleAppIndexingWarning">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -21,7 +19,8 @@
         <activity
             android:name=".StartActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
             android:launchMode="singleTop">
 
             <intent-filter>
@@ -35,6 +34,7 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
             android:launchMode="singleTop">
 
             <intent-filter>
