@@ -7,9 +7,7 @@
     <string name="action_about_license">Lizenz</string>
     <string name="action_about_contribute">Mitmachen</string>
     <string name="action_about_help">Hilfe</string>
-    <string name="action_adjust">Verbessern</string>
-    <string name="action_filter">Filter</string>
-    <string name="action_hide">Verstecke Launchericon</string>
+    <string name="action_hide">Verstecke / Zeige Launchericon</string>
 
     // Filter
 
@@ -20,7 +18,7 @@
     <string name="filter_hue">HUE</string>
     <string name="filter_gamma">Gamma</string>
     <string name="filter_colorBalance">Farbausgleich</string>
-    <string name="filter_monochrome">Sepia</string>
+    <string name="filter_sepia">Sepia</string>
     <string name="filter_rgb">RGB</string>
     <string name="filter_haze">Haze</string>
     <string name="filter_vignette">Vignette</string>
@@ -31,6 +29,13 @@
     <string name="filter_halftone">Halbton</string>
     <string name="filter_invert">Invert</string>
     <string name="filter_pixelation">Pixel</string>
+    <string name="filter_solarize">Solarize</string>
+    <string name="filter_emboss">Emboss</string>
+    <string name="filter_kuwahara">Kuwahara</string>
+    <string name="filter_luminance_threshold">Luminance threshold</string>
+    <string name="filter_zoom_blur">Zoom Blur</string>
+    <string name="filter_CGA_colorspace">CGA Colorspace</string>CGA_colorspace
+    <string name="filter_monochrome">Monochrome</string>CGA_colorspace
 
     // Crop
 
@@ -46,6 +51,7 @@
     <string name="dialog_text_hint">Text eingeben:</string>
     <string name="dialog_high_hint">Höhe:</string>
     <string name="dialog_width_hint">Breite:</string>
+    <string name="dialog_loading">Bitte warten. Bild wird geladen.</string>
 
     // About dialogs
 
@@ -86,9 +92,9 @@
         SIL Open Font License, Version 1.1.&lt;br>
         &lt;i>https://github.com/Templarian/MaterialDesign&lt;/i>&lt;br>&lt;br>
 
-        &lt;b>Woman 001&lt;/b>&lt;br>
-        Gemeinfrei&lt;br>
-        &lt;i>https://www.flickr.com/photos/153447606@N05/33965207055/&lt;/i>
+        &lt;b>WomanPhoto&lt;/b>&lt;br>
+        Photo by freestocks.org on Unsplash&lt;br>
+        &lt;i>https://unsplash.com/photos/9UVmlIb0wJU&lt;/i>
 
     </string>
 

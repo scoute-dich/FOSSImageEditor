@@ -17,18 +17,22 @@
 package de.aosd.fossimageeditor.utils;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.PointF;
 import android.opengl.Matrix;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import androidx.cardview.widget.CardView;
 
 import de.aosd.fossimageeditor.R;
+import de.aosd.fossimageeditor.InfoActivity;
 import jp.co.cyberagent.android.gpuimage.filter.*;
 
 import java.util.LinkedList;
@@ -39,7 +43,7 @@ public class GPUImageFilterTools {
     public static void showDialog (final Context context, final OnGpuImageFilterChosenListener listener) {
 
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(context);
-        View dialogView = View.inflate(context, R.layout.dialog_filter, null);
+        final View dialogView = View.inflate(context, R.layout.dialog_filter, null);
 
         LinearLayout menu_filter_saturation = dialogView.findViewById(R.id.filter_saturation);
         menu_filter_saturation.setOnClickListener(new View.OnClickListener() {
@@ -97,8 +101,8 @@ public class GPUImageFilterTools {
                 bottomSheetDialog.cancel();
             }
         });
-        CardView menu_filter_monochrome = dialogView.findViewById(R.id.filter_monochrome);
-        menu_filter_monochrome.setOnClickListener(new View.OnClickListener() {
+        CardView menu_filter_sepia = dialogView.findViewById(R.id.filter_sepia);
+        menu_filter_sepia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.SEPIA));
@@ -153,11 +157,19 @@ public class GPUImageFilterTools {
                 bottomSheetDialog.cancel();
             }
         });
-        CardView menu_filter_invert = dialogView.findViewById(R.id.filter_invert);
-        menu_filter_invert.setOnClickListener(new View.OnClickListener() {
+        CardView menu_filter_monochrome = dialogView.findViewById(R.id.filter_monochrome);
+        menu_filter_monochrome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.INVERT));
+                listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.MONOCHROME));
+                bottomSheetDialog.cancel();
+            }
+        });
+        CardView menu_filter_solarize = dialogView.findViewById(R.id.filter_solarize);
+        menu_filter_solarize.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.SOLARIZE));
                 bottomSheetDialog.cancel();
             }
         });
@@ -185,10 +197,70 @@ public class GPUImageFilterTools {
                 bottomSheetDialog.cancel();
             }
         });
+        CardView menu_filter_kuwahara = dialogView.findViewById(R.id.filter_kuwahara);
+        menu_filter_kuwahara.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.KUWAHARA));
+                bottomSheetDialog.cancel();
+            }
+        });
+        CardView menu_filter_luminance_threshold = dialogView.findViewById(R.id.filter_luminance_threshold);
+        menu_filter_luminance_threshold.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.LUMINANCE_THRESHSOLD));
+                bottomSheetDialog.cancel();
+            }
+        });
+        CardView menu_filter_emboss = dialogView.findViewById(R.id.filter_emboss);
+        menu_filter_emboss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.EMBOSS));
+                bottomSheetDialog.cancel();
+            }
+        });
+        CardView menu_filter_CGA_colorspace = dialogView.findViewById(R.id.filter_CGA_colorspace);
+        menu_filter_CGA_colorspace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.CGA_COLORSPACE));
+                bottomSheetDialog.cancel();
+            }
+        });
+        CardView menu_filter_zoom_blur = dialogView.findViewById(R.id.filter_zoom_blur);
+        menu_filter_zoom_blur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.ZOOM_BLUR));
+                bottomSheetDialog.cancel();
+            }
+        });
 
         bottomSheetDialog.setContentView(dialogView);
         bottomSheetDialog.show();
-        MsgUtil.setBottomSheetBehavior(bottomSheetDialog, dialogView, BottomSheetBehavior.STATE_EXPANDED);
+
+        final BottomSheetBehavior mBehavior = BottomSheetBehavior.from((View) dialogView.getParent());
+        int peekHeight = Math.round(164 * context.getResources().getDisplayMetrics().density);
+        mBehavior.setPeekHeight(peekHeight);
+
+        ImageButton button_more = dialogView.findViewById(R.id.button_more);
+        button_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+            }
+        });
+
+        ImageButton button_info = dialogView.findViewById(R.id.button_info);
+        button_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(context, InfoActivity.class);
+                context.startActivity(myIntent);
+            }
+        });
     }
 
     private static GPUImageFilter createFilterForType(final Context context, final FilterType type) {
@@ -401,6 +473,18 @@ public class GPUImageFilterTools {
                 adjuster = new SepiaAdjuster().filter(filter);
             }
 
+            else if (filter instanceof GPUImageZoomBlurFilter) {
+                adjuster = new ZoomBlurAdjuster().filter(filter);
+            }
+
+            else if (filter instanceof GPUImageKuwaharaFilter) {
+                adjuster = new KuwaharaAdjuster().filter(filter);
+            }
+
+            else if (filter instanceof GPUImageSolarizeFilter) {
+                adjuster = new SolarizeAdjuster().filter(filter);
+            }
+
 
 
             else if (filter instanceof GPUImageContrastFilter) {
@@ -499,10 +583,24 @@ public class GPUImageFilterTools {
             }
         }
 
+        private class SolarizeAdjuster extends Adjuster<GPUImageSolarizeFilter> {
+            @Override
+            public void adjust(final int percentage) {
+                getFilter().setThreshold(range(percentage, 0.0f, 1.0f));
+            }
+        }
+
         private class SharpnessAdjuster extends Adjuster<GPUImageSharpenFilter> {
             @Override
             public void adjust(final int percentage) {
                 getFilter().setSharpness(range(percentage, -4.0f, 4.0f));
+            }
+        }
+
+        private class ZoomBlurAdjuster extends Adjuster<GPUImageZoomBlurFilter> {
+            @Override
+            public void adjust(final int percentage) {
+                getFilter().setBlurSize(range(percentage, 0.0f, 3.0f));
             }
         }
 
@@ -552,7 +650,15 @@ public class GPUImageFilterTools {
             @Override
             public void adjust(final int percentage) {
                 // In theorie to 256, but only first 50 are interesting
-                getFilter().setColorLevels(range(percentage));
+                getFilter().setColorLevels(range(percentage/5));
+            }
+        }
+        
+        private class KuwaharaAdjuster extends Adjuster<GPUImageKuwaharaFilter> {
+            @Override
+            public void adjust(final int percentage) {
+                // In theorie to 256, but only first 50 are interesting
+                getFilter().setRadius(percentage/15);
             }
         }
 
@@ -641,7 +747,7 @@ public class GPUImageFilterTools {
         private class GaussianBlurAdjuster extends Adjuster<GPUImageGaussianBlurFilter> {
             @Override
             public void adjust(final int percentage) {
-                getFilter().setBlurSize(range(percentage, 0.0f, 1.0f));
+                getFilter().setBlurSize(range(percentage, 0.0f, 4.0f));
             }
         }
 

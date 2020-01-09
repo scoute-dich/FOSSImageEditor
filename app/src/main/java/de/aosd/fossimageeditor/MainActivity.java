@@ -55,8 +55,6 @@ import jp.co.cyberagent.android.gpuimage.filter.GPUImageFilter;
 
 public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
 
-    private String afterSaving;
-
     private Activity activity;
     private Uri uriSource;
 
@@ -77,13 +75,17 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     private int textColor;
     private int badgedImageView_int;
 
+    private Uri imageUri;
+    private ImageButton button_open;
+    private ImageButton button_save;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         CaocConfig.Builder.create()
                 .backgroundMode(CaocConfig.BACKGROUND_MODE_SILENT) //default: CaocConfig.BACKGROUND_MODE_SHOW_CUSTOM
-                .errorActivity(StartActivity.class) //default: null (default error activity)
+                .errorActivity(InfoActivity.class) //default: null (default error activity)
                 .apply();
 
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
@@ -160,132 +162,140 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         button_crop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                appbar.setVisibility(View.INVISIBLE);
-                cropBar.setVisibility(View.VISIBLE);
-                cropImageView.setVisibility(View.VISIBLE);
-                mGPUImageView.setVisibility(View.INVISIBLE);
-                cropImageView.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
-                Button button_1_1 = findViewById(R.id.button_1_1);
-                button_1_1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        cropImageView.setAspectRatio(1,1);
-                    }
-                });
-                Button button_4_3 = findViewById(R.id.button_4_3);
-                button_4_3.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        cropImageView.setAspectRatio(4,3);
-                    }
-                });
-                Button button_3_4 = findViewById(R.id.button_3_4);
-                button_3_4.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        cropImageView.setAspectRatio(3,4);
-                    }
-                });
-                Button button_16_9 = findViewById(R.id.button_16_9);
-                button_16_9.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        cropImageView.setAspectRatio(16,9);
-                    }
-                });
-                Button button_9_16 = findViewById(R.id.button_9_16);
-                button_9_16.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        cropImageView.setAspectRatio(9,16);
-                    }
-                });
-                Button button_custom = findViewById(R.id.button_custom);
-                button_custom.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
+                try {
+                    cropImageView.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
+                    appbar.setVisibility(View.INVISIBLE);
+                    cropBar.setVisibility(View.VISIBLE);
+                    cropImageView.setVisibility(View.VISIBLE);
+                    mGPUImageView.setVisibility(View.INVISIBLE);
+                    Button button_1_1 = findViewById(R.id.button_1_1);
+                    button_1_1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            cropImageView.setAspectRatio(1,1);
+                        }
+                    });
+                    Button button_4_3 = findViewById(R.id.button_4_3);
+                    button_4_3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            cropImageView.setAspectRatio(4,3);
+                        }
+                    });
+                    Button button_3_4 = findViewById(R.id.button_3_4);
+                    button_3_4.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            cropImageView.setAspectRatio(3,4);
+                        }
+                    });
+                    Button button_16_9 = findViewById(R.id.button_16_9);
+                    button_16_9.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            cropImageView.setAspectRatio(16,9);
+                        }
+                    });
+                    Button button_9_16 = findViewById(R.id.button_9_16);
+                    button_9_16.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            cropImageView.setAspectRatio(9,16);
+                        }
+                    });
+                    Button button_custom = findViewById(R.id.button_custom);
+                    button_custom.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
 
-                        final BottomSheetDialog bottomSheetDialog_custom = new BottomSheetDialog(activity);
-                        View dialogView = View.inflate(activity, R.layout.dialog_crop_custom, null);
-                        final EditText dialog_width = dialogView.findViewById(R.id.dialog_width);
-                        final EditText dialog_height = dialogView.findViewById(R.id.dialog_high);
+                            final BottomSheetDialog bottomSheetDialog_custom = new BottomSheetDialog(activity);
+                            View dialogView = View.inflate(activity, R.layout.dialog_crop_custom, null);
+                            final EditText dialog_width = dialogView.findViewById(R.id.dialog_width);
+                            final EditText dialog_height = dialogView.findViewById(R.id.dialog_high);
 
-                        Button action_ok = dialogView.findViewById(R.id.action_ok);
-                        action_ok.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                int width = Integer.parseInt(dialog_width.getText().toString());
-                                int height = Integer.parseInt(dialog_height.getText().toString());
+                            Button action_ok = dialogView.findViewById(R.id.action_ok);
+                            action_ok.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    int width = Integer.parseInt(dialog_width.getText().toString());
+                                    int height = Integer.parseInt(dialog_height.getText().toString());
 
-                                cropImageView.setAspectRatio(width,height);
-                                bottomSheetDialog_custom.cancel();
+                                    cropImageView.setAspectRatio(width,height);
+                                    bottomSheetDialog_custom.cancel();
 
-                            }
-                        });
-                        Button action_cancel = dialogView.findViewById(R.id.action_cancel);
-                        action_cancel.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                bottomSheetDialog_custom.cancel();
-                            }
-                        });
-                        bottomSheetDialog_custom.setContentView(dialogView);
-                        bottomSheetDialog_custom.show();
-                        MsgUtil.setBottomSheetBehavior(bottomSheetDialog_custom, dialogView, BottomSheetBehavior.STATE_EXPANDED);
-                    }
-                });
-                ImageButton button_right = findViewById(R.id.button_right);
-                button_right.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        cropImageView.rotateImage(90);
-                    }
-                });
-                ImageButton button_left = findViewById(R.id.button_left);
-                button_left.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        cropImageView.rotateImage(270);
-                    }
-                });
-                ImageButton button_horizontal = findViewById(R.id.button_horizontal);
-                button_horizontal.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        cropImageView.flipImageHorizontally();
-                    }
-                });
-                ImageButton button_vertical = findViewById(R.id.button_vertical);
-                button_vertical.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        cropImageView.flipImageVertically();
-                    }
-                });
+                                }
+                            });
+                            Button action_cancel = dialogView.findViewById(R.id.action_cancel);
+                            action_cancel.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    bottomSheetDialog_custom.cancel();
+                                }
+                            });
+                            bottomSheetDialog_custom.setContentView(dialogView);
+                            bottomSheetDialog_custom.show();
+                            MsgUtil.setBottomSheetBehavior(bottomSheetDialog_custom, dialogView, BottomSheetBehavior.STATE_EXPANDED);
+                        }
+                    });
+                    ImageButton button_right = findViewById(R.id.button_right);
+                    button_right.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            cropImageView.rotateImage(90);
+                        }
+                    });
+                    ImageButton button_left = findViewById(R.id.button_left);
+                    button_left.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            cropImageView.rotateImage(270);
+                        }
+                    });
+                    ImageButton button_horizontal = findViewById(R.id.button_horizontal);
+                    button_horizontal.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            cropImageView.flipImageHorizontally();
+                        }
+                    });
+                    ImageButton button_vertical = findViewById(R.id.button_vertical);
+                    button_vertical.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            cropImageView.flipImageVertically();
+                        }
+                    });
 
-                ImageButton button_apply_not = findViewById(R.id.button_apply_not);
-                button_apply_not.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        appbar.setVisibility(View.VISIBLE);
-                        cropBar.setVisibility(View.INVISIBLE);
-                        cropImageView.setVisibility(View.INVISIBLE);
-                        mGPUImageView.setVisibility(View.VISIBLE);
-                    }
-                });
-                ImageButton button_apply = findViewById(R.id.button_apply);
-                button_apply.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Bitmap cropped = cropImageView.getCroppedImage();
-                        mGPUImageView.setImage(cropped);
-                        appbar.setVisibility(View.VISIBLE);
-                        cropBar.setVisibility(View.INVISIBLE);
-                        cropImageView.setVisibility(View.INVISIBLE);
-                        mGPUImageView.setVisibility(View.VISIBLE);
-                        applyFilter();
-                    }
-                });
+                    ImageButton button_apply_not = findViewById(R.id.button_apply_not);
+                    button_apply_not.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            appbar.setVisibility(View.VISIBLE);
+                            cropBar.setVisibility(View.INVISIBLE);
+                            cropImageView.setVisibility(View.INVISIBLE);
+                            mGPUImageView.setVisibility(View.VISIBLE);
+                        }
+                    });
+                    ImageButton button_apply = findViewById(R.id.button_apply);
+                    button_apply.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Bitmap cropped = cropImageView.getCroppedImage();
+                            mGPUImageView.setImage(cropped);
+                            appbar.setVisibility(View.VISIBLE);
+                            cropBar.setVisibility(View.INVISIBLE);
+                            cropImageView.setVisibility(View.INVISIBLE);
+                            mGPUImageView.setVisibility(View.VISIBLE);
+                            button_save.setEnabled(true);
+                            applyFilter();
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    mGPUImageView.setFilter(new GPUImageFilter());
+                    mGPUImageView.requestRender();
+                    MsgUtil.show(activity, getString(R.string.dialog_loading));
+                }
             }
         });
 
@@ -293,234 +303,251 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         button_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                try {
+                    final LinearLayout textPositionLayout = findViewById(R.id.textPositionLayout);
+                    final LinearLayout textToolsLayout = findViewById(R.id.textToolsLayout);
+                    final BadgedImageView badged_iv_bottom_end = findViewById(R.id.badged_iv_bottom_end);  //4
+                    final BadgedImageView badged_iv_bottom_start = findViewById(R.id.badged_iv_bottom_start);  //3
+                    final BadgedImageView badged_iv_top_start = findViewById(R.id.badged_iv_top_start);  //1
+                    final BadgedImageView badged_iv_top_end = findViewById(R.id.badged_iv_top_end);  //2
 
-                appbar.setVisibility(View.INVISIBLE);
-                textBar.setVisibility(View.VISIBLE);
-                badged_iv_layout.setVisibility(View.VISIBLE);
-                mGPUImageView.setVisibility(View.INVISIBLE);
-                textColor = getColor(R.color.colorAccent);
+                    badged_iv_top_start.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
+                    badged_iv_top_end.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
+                    badged_iv_bottom_start.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
+                    badged_iv_bottom_end.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
 
-                final LinearLayout textPositionLayout = findViewById(R.id.textPositionLayout);
-                final LinearLayout textToolsLayout = findViewById(R.id.textToolsLayout);
+                    badged_iv_bottom_end.setVisibility(View.VISIBLE);
+                    badged_iv_bottom_start.setVisibility(View.INVISIBLE);
+                    badged_iv_top_end.setVisibility(View.INVISIBLE);
+                    badged_iv_top_start.setVisibility(View.INVISIBLE);
+                    badgedImageView_int = 4;
 
+                    appbar.setVisibility(View.INVISIBLE);
+                    textBar.setVisibility(View.VISIBLE);
+                    badged_iv_layout.setVisibility(View.VISIBLE);
+                    mGPUImageView.setVisibility(View.INVISIBLE);
+                    textColor = getColor(R.color.colorAccent);
 
-                final BadgedImageView badged_iv_bottom_end = findViewById(R.id.badged_iv_bottom_end);  //4
-                final BadgedImageView badged_iv_bottom_start = findViewById(R.id.badged_iv_bottom_start);  //3
-                final BadgedImageView badged_iv_top_start = findViewById(R.id.badged_iv_top_start);  //1
-                final BadgedImageView badged_iv_top_end = findViewById(R.id.badged_iv_top_end);  //2
-
-                badged_iv_bottom_end.setVisibility(View.VISIBLE);
-                badged_iv_bottom_start.setVisibility(View.INVISIBLE);
-                badged_iv_top_end.setVisibility(View.INVISIBLE);
-                badged_iv_top_start.setVisibility(View.INVISIBLE);
-                badgedImageView_int = 4;
-
-                badged_iv_top_start.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
-                badged_iv_top_end.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
-                badged_iv_bottom_start.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
-                badged_iv_bottom_end.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
-
-                final EditText dialog_text = findViewById(R.id.dialog_text);
-                dialog_text.addTextChangedListener(new TextWatcher() {
-                    public void afterTextChanged(Editable s) {
-                        switch(badgedImageView_int) {
-                            case 1:
-                                badged_iv_top_start.setBadge(s.toString(), textColor);
-                                break;
-                            case 2:
-                                badged_iv_top_end.setBadge(s.toString(), textColor);
-                                break;
-                            case 3:
-                                badged_iv_bottom_start.setBadge(s.toString(), textColor);
-                                break;
-                            case 4:
-                                badged_iv_bottom_end.setBadge(s.toString(), textColor);
-                                break;
+                    final EditText dialog_text = findViewById(R.id.dialog_text);
+                    dialog_text.addTextChangedListener(new TextWatcher() {
+                        public void afterTextChanged(Editable s) {
+                            switch(badgedImageView_int) {
+                                case 1:
+                                    badged_iv_top_start.setBadge(s.toString(), textColor);
+                                    break;
+                                case 2:
+                                    badged_iv_top_end.setBadge(s.toString(), textColor);
+                                    break;
+                                case 3:
+                                    badged_iv_bottom_start.setBadge(s.toString(), textColor);
+                                    break;
+                                case 4:
+                                    badged_iv_bottom_end.setBadge(s.toString(), textColor);
+                                    break;
+                            }
                         }
-                    }
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {}
-                });
+                        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+                        public void onTextChanged(CharSequence s, int start, int before, int count) {}
+                    });
 
-                ImageButton button_textApply_not = findViewById(R.id.button_textApply_not);
-                button_textApply_not.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        appbar.setVisibility(View.VISIBLE);
-                        textBar.setVisibility(View.INVISIBLE);
-                        badged_iv_layout.setVisibility(View.INVISIBLE);
-                        mGPUImageView.setVisibility(View.VISIBLE);
-                    }
-                });
-                ImageButton button_textApply = findViewById(R.id.button_textApply);
-                button_textApply.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        switch(badgedImageView_int) {
-                            case 1:
-                                mGPUImageView.setImage(getBitmapFromView(badged_iv_top_start));
-                                break;
-                            case 2:
-                                mGPUImageView.setImage(getBitmapFromView(badged_iv_top_end));
-                                break;
-                            case 3:
-                                mGPUImageView.setImage(getBitmapFromView(badged_iv_bottom_start));
-                                break;
-                            case 4:
-                                mGPUImageView.setImage(getBitmapFromView(badged_iv_bottom_end));
-                                break;
+                    ImageButton button_textApply_not = findViewById(R.id.button_textApply_not);
+                    button_textApply_not.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            appbar.setVisibility(View.VISIBLE);
+                            textBar.setVisibility(View.INVISIBLE);
+                            badged_iv_layout.setVisibility(View.INVISIBLE);
+                            mGPUImageView.setVisibility(View.VISIBLE);
                         }
-                        appbar.setVisibility(View.VISIBLE);
-                        textBar.setVisibility(View.INVISIBLE);
-                        badged_iv_layout.setVisibility(View.INVISIBLE);
-                        mGPUImageView.setVisibility(View.VISIBLE);
-                        applyFilter();
-                    }
-                });
+                    });
+                    ImageButton button_textApply = findViewById(R.id.button_textApply);
+                    button_textApply.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            switch(badgedImageView_int) {
+                                case 1:
+                                    mGPUImageView.setImage(getBitmapFromView(badged_iv_top_start));
+                                    break;
+                                case 2:
+                                    mGPUImageView.setImage(getBitmapFromView(badged_iv_top_end));
+                                    break;
+                                case 3:
+                                    mGPUImageView.setImage(getBitmapFromView(badged_iv_bottom_start));
+                                    break;
+                                case 4:
+                                    mGPUImageView.setImage(getBitmapFromView(badged_iv_bottom_end));
+                                    break;
+                            }
+                            appbar.setVisibility(View.VISIBLE);
+                            textBar.setVisibility(View.INVISIBLE);
+                            badged_iv_layout.setVisibility(View.INVISIBLE);
+                            mGPUImageView.setVisibility(View.VISIBLE);
+                            button_save.setEnabled(true);
+                            applyFilter();
+                        }
+                    });
 
-                ImageButton button_position = findViewById(R.id.button_position);
-                button_position.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        textToolsLayout.setVisibility(View.INVISIBLE);
-                        textPositionLayout.setVisibility(View.VISIBLE);
+                    ImageButton button_position = findViewById(R.id.button_position);
+                    button_position.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            textToolsLayout.setVisibility(View.INVISIBLE);
+                            textPositionLayout.setVisibility(View.VISIBLE);
 
-                        ImageButton position_topLeft = findViewById(R.id.position_topLeft);
-                        position_topLeft.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                textToolsLayout.setVisibility(View.VISIBLE);
-                                textPositionLayout.setVisibility(View.INVISIBLE);
-                                badgedImageView_int = 1;
-                                badged_iv_bottom_end.setVisibility(View.INVISIBLE);
-                                badged_iv_bottom_start.setVisibility(View.INVISIBLE);
-                                badged_iv_top_end.setVisibility(View.INVISIBLE);
-                                badged_iv_top_start.setVisibility(View.VISIBLE);
-                                badged_iv_top_start.setBadge(dialog_text.getText().toString(), textColor);
-                            }
-                        });
-                        ImageButton position_topRight = findViewById(R.id.position_topRight);
-                        position_topRight.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                textToolsLayout.setVisibility(View.VISIBLE);
-                                textPositionLayout.setVisibility(View.INVISIBLE);
-                                badgedImageView_int = 2;
-                                badged_iv_bottom_end.setVisibility(View.INVISIBLE);
-                                badged_iv_bottom_start.setVisibility(View.INVISIBLE);
-                                badged_iv_top_end.setVisibility(View.VISIBLE);
-                                badged_iv_top_start.setVisibility(View.INVISIBLE);
-                                badged_iv_top_end.setBadge(dialog_text.getText().toString(), textColor);
-                            }
-                        });
-                        ImageButton position_bottomLeft = findViewById(R.id.position_bottomLeft);
-                        position_bottomLeft.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                textToolsLayout.setVisibility(View.VISIBLE);
-                                textPositionLayout.setVisibility(View.INVISIBLE);
-                                badgedImageView_int = 3;
-                                badged_iv_bottom_end.setVisibility(View.INVISIBLE);
-                                badged_iv_bottom_start.setVisibility(View.VISIBLE);
-                                badged_iv_top_end.setVisibility(View.INVISIBLE);
-                                badged_iv_top_start.setVisibility(View.INVISIBLE);
-                                badged_iv_bottom_start.setBadge(dialog_text.getText().toString(), textColor);
-                            }
-                        });
-                        ImageButton button_bottomRight = findViewById(R.id.button_bottomRight);
-                        button_bottomRight.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                textToolsLayout.setVisibility(View.VISIBLE);
-                                textPositionLayout.setVisibility(View.INVISIBLE);
-                                badgedImageView_int = 4;
-                                badged_iv_bottom_end.setVisibility(View.VISIBLE);
-                                badged_iv_bottom_start.setVisibility(View.INVISIBLE);
-                                badged_iv_top_end.setVisibility(View.INVISIBLE);
-                                badged_iv_top_start.setVisibility(View.INVISIBLE);
-                                badged_iv_bottom_end.setBadge(dialog_text.getText().toString(), textColor);
-                            }
-                        });
-                    }
-                });
+                            ImageButton position_topLeft = findViewById(R.id.position_topLeft);
+                            position_topLeft.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    textToolsLayout.setVisibility(View.VISIBLE);
+                                    textPositionLayout.setVisibility(View.INVISIBLE);
+                                    badgedImageView_int = 1;
+                                    badged_iv_bottom_end.setVisibility(View.INVISIBLE);
+                                    badged_iv_bottom_start.setVisibility(View.INVISIBLE);
+                                    badged_iv_top_end.setVisibility(View.INVISIBLE);
+                                    badged_iv_top_start.setVisibility(View.VISIBLE);
+                                    badged_iv_top_start.setBadge(dialog_text.getText().toString(), textColor);
+                                }
+                            });
+                            ImageButton position_topRight = findViewById(R.id.position_topRight);
+                            position_topRight.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    textToolsLayout.setVisibility(View.VISIBLE);
+                                    textPositionLayout.setVisibility(View.INVISIBLE);
+                                    badgedImageView_int = 2;
+                                    badged_iv_bottom_end.setVisibility(View.INVISIBLE);
+                                    badged_iv_bottom_start.setVisibility(View.INVISIBLE);
+                                    badged_iv_top_end.setVisibility(View.VISIBLE);
+                                    badged_iv_top_start.setVisibility(View.INVISIBLE);
+                                    badged_iv_top_end.setBadge(dialog_text.getText().toString(), textColor);
+                                }
+                            });
+                            ImageButton position_bottomLeft = findViewById(R.id.position_bottomLeft);
+                            position_bottomLeft.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    textToolsLayout.setVisibility(View.VISIBLE);
+                                    textPositionLayout.setVisibility(View.INVISIBLE);
+                                    badgedImageView_int = 3;
+                                    badged_iv_bottom_end.setVisibility(View.INVISIBLE);
+                                    badged_iv_bottom_start.setVisibility(View.VISIBLE);
+                                    badged_iv_top_end.setVisibility(View.INVISIBLE);
+                                    badged_iv_top_start.setVisibility(View.INVISIBLE);
+                                    badged_iv_bottom_start.setBadge(dialog_text.getText().toString(), textColor);
+                                }
+                            });
+                            ImageButton button_bottomRight = findViewById(R.id.button_bottomRight);
+                            button_bottomRight.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    textToolsLayout.setVisibility(View.VISIBLE);
+                                    textPositionLayout.setVisibility(View.INVISIBLE);
+                                    badgedImageView_int = 4;
+                                    badged_iv_bottom_end.setVisibility(View.VISIBLE);
+                                    badged_iv_bottom_start.setVisibility(View.INVISIBLE);
+                                    badged_iv_top_end.setVisibility(View.INVISIBLE);
+                                    badged_iv_top_start.setVisibility(View.INVISIBLE);
+                                    badged_iv_bottom_end.setBadge(dialog_text.getText().toString(), textColor);
+                                }
+                            });
+                        }
+                    });
 
-                ImageButton button_color = findViewById(R.id.button_color);
-                button_color.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        ColorPickerDialogBuilder
-                                .with(activity)
-                                .setTitle(getString(R.string.dialog_color))
-                                .initialColor(textColor)
-                                .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
-                                .density(10)
-                                .setOnColorSelectedListener(new OnColorSelectedListener() {
-                                    @Override
-                                    public void onColorSelected(int selectedColor) {
-                                    }
-                                })
-                                .setPositiveButton(getString(R.string.dialog_ok), new ColorPickerClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int selectedColor, Integer[] allColors) {
-                                        textColor = selectedColor;
-                                        switch(badgedImageView_int) {
-                                            case 1:
-                                                badged_iv_top_start.setBadge(dialog_text.getText().toString(), textColor);
-                                                break;
-                                            case 2:
-                                                badged_iv_top_end.setBadge(dialog_text.getText().toString(), textColor);
-                                                break;
-                                            case 3:
-                                                badged_iv_bottom_start.setBadge(dialog_text.getText().toString(), textColor);
-                                                break;
-                                            case 4:
-                                                badged_iv_bottom_end.setBadge(dialog_text.getText().toString(), textColor);
-                                                break;
+                    ImageButton button_color = findViewById(R.id.button_color);
+                    button_color.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            ColorPickerDialogBuilder
+                                    .with(activity)
+                                    .setTitle(getString(R.string.dialog_color))
+                                    .initialColor(textColor)
+                                    .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
+                                    .density(10)
+                                    .setOnColorSelectedListener(new OnColorSelectedListener() {
+                                        @Override
+                                        public void onColorSelected(int selectedColor) {
                                         }
-                                    }
-                                })
-                                .setNegativeButton(getString(R.string.dialog_cancel), new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                    }
-                                })
-                                .build()
-                                .show();
-                    }
-                });
+                                    })
+                                    .setPositiveButton(getString(R.string.dialog_ok), new ColorPickerClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int selectedColor, Integer[] allColors) {
+                                            textColor = selectedColor;
+                                            switch(badgedImageView_int) {
+                                                case 1:
+                                                    badged_iv_top_start.setBadge(dialog_text.getText().toString(), textColor);
+                                                    break;
+                                                case 2:
+                                                    badged_iv_top_end.setBadge(dialog_text.getText().toString(), textColor);
+                                                    break;
+                                                case 3:
+                                                    badged_iv_bottom_start.setBadge(dialog_text.getText().toString(), textColor);
+                                                    break;
+                                                case 4:
+                                                    badged_iv_bottom_end.setBadge(dialog_text.getText().toString(), textColor);
+                                                    break;
+                                            }
+                                        }
+                                    })
+                                    .setNegativeButton(getString(R.string.dialog_cancel), new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                        }
+                                    })
+                                    .build()
+                                    .show();
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    mGPUImageView.setFilter(new GPUImageFilter());
+                    mGPUImageView.requestRender();
+                    MsgUtil.show(activity, getString(R.string.dialog_loading));
+                }
             }
         });
 
-        ImageButton button_save = findViewById(R.id.button_save);
+        button_save = findViewById(R.id.button_save);
+        button_save.setEnabled(false);
         button_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                afterSaving = "afterSaving_save";
                 try {
                     saveBitmap();
                 } catch (Exception e) {
                     e.printStackTrace();
-                    afterSaving = "afterSaving_not";
+                    MsgUtil.show(activity, getString(R.string.dialog_save_not));
                 }
             }
         });
 
-        ImageButton button_open = findViewById(R.id.button_open);
+        button_open = findViewById(R.id.button_open);
+        button_open.setEnabled(false);
         button_open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                afterSaving = "afterSaving_open";
-                try {
-                    saveBitmap();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    afterSaving = "afterSaving_not";
-                }
+                Intent openIntent = new Intent();
+                openIntent.setAction(Intent.ACTION_VIEW);
+                openIntent.setDataAndType(imageUri, "image/*");
+                startActivity(openIntent);
             }
         });
     }
 
-    public static Bitmap getBitmapFromView(View v) {
+    @Override
+    public void onResume() {
+        super.onResume();
+        ContentResolver resolver = getContentResolver();
+        try {
+            OutputStream fos = resolver.openOutputStream(Objects.requireNonNull(imageUri));
+            Objects.requireNonNull(fos).close();
+            button_open.setEnabled(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            button_open.setEnabled(false);
+        }
+    }
+
+    private static Bitmap getBitmapFromView(View v) {
         v.measure(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         Bitmap b = Bitmap.createBitmap(v.getMeasuredWidth(), v.getMeasuredHeight(), Bitmap.Config.ARGB_8888);
         Canvas c = new Canvas(b);
@@ -545,7 +572,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, fileName);
         contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/*");
         contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + File.separator + "FOSS_ImageEditor");
-        final Uri imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
+        imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
         fos = resolver.openOutputStream(Objects.requireNonNull(imageUri));
 
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
@@ -556,22 +583,9 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         mGPUImageView.setImage(bitmap);
         filterApply.setEnabled(false);
         filterCancel.setEnabled(false);
+        button_open.setEnabled(true);
         seekBar.setEnabled(false);
-
-        switch (afterSaving) {
-            case "afterSaving_open":
-                Intent openIntent = new Intent();
-                openIntent.setAction(Intent.ACTION_VIEW);
-                openIntent.setDataAndType(imageUri, "image/*");
-                startActivity(Intent.createChooser(openIntent, null));
-                break;
-            case "afterSaving_not":
-                MsgUtil.show(activity, getString(R.string.dialog_load_not));
-                break;
-            case "afterSaving_save":
-                MsgUtil.show(activity, getString(R.string.dialog_save_ok));
-                break;
-        }
+        MsgUtil.show(activity, getString(R.string.dialog_save_ok));
     }
 
     private void switchFilterTo(final GPUImageFilter filter) {
@@ -598,6 +612,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 mGPUImageView.setFilter(new GPUImageFilter());
                 applyFilterCount = 1;
                 applyFilter();
+                button_save.setEnabled(true);
             } catch (Exception e) {
                 e.printStackTrace();
                 MsgUtil.show(activity, getString(R.string.dialog_save_not));
@@ -606,6 +621,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             Bitmap bitmap = mGPUImageView.getGPUImage().getBitmapWithFilterApplied();
             mGPUImageView.setImage(bitmap);
             mGPUImageView.setFilter(new GPUImageFilter());
+            button_save.setEnabled(true);
         }
         filterApply.setEnabled(false);
         filterCancel.setEnabled(false);
