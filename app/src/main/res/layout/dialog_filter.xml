@@ -1,855 +1,801 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    android:id="@+id/scrollView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="ContentDescription"
     android:background="?android:attr/colorBackground">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp"
-        android:orientation="vertical"
-        android:background="?android:attr/colorBackground">
+        android:layout_margin="6dp">
 
         <LinearLayout
-            android:baselineAligned="false"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:id="@+id/filter_saturation"
-                android:orientation="horizontal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_gravity="center_vertical"
-                android:background="?attr/actionBarItemBackground">
-
-                <ImageView
-                    android:layout_width="21dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="6dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_saturation" />
-
-                <TextView
-                    android:text="@string/filter_saturation"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/filter_contrast"
-                android:orientation="horizontal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_gravity="center_vertical"
-                android:background="?attr/actionBarItemBackground">
-
-                <ImageView
-                    android:layout_width="21dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="6dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_contrast" />
-
-                <TextView
-                    android:text="@string/filter_contrast"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/filter_exposure"
-                android:orientation="horizontal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_gravity="center_vertical"
-                android:background="?attr/actionBarItemBackground">
-
-                <ImageView
-                    android:layout_width="21dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="6dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_exposure" />
-
-                <TextView
-                    android:text="@string/filter_exposure"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:baselineAligned="false">
 
             <LinearLayout
-                android:id="@+id/filter_gamma"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
                 android:orientation="horizontal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_gravity="center_vertical"
-                android:background="?attr/actionBarItemBackground">
+                android:baselineAligned="false">
 
-                <ImageView
-                    android:layout_width="21dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="6dp"
+                <LinearLayout
+                    android:id="@+id/filter_saturation"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_gamma" />
+                    android:background="?attr/selectableItemBackground">
 
-                <TextView
-                    android:text="@string/filter_gamma"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"/>
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_saturation" />
+
+                    <TextView
+                        android:text="@string/filter_saturation"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/filter_contrast"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_contrast" />
+
+                    <TextView
+                        android:text="@string/filter_contrast"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/filter_exposure"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_exposure" />
+
+                    <TextView
+                        android:text="@string/filter_exposure"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/filter_white"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
                 android:orientation="horizontal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_gravity="center_vertical"
-                android:background="?attr/actionBarItemBackground">
+                android:baselineAligned="false">
 
-                <ImageView
-                    android:layout_width="21dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="6dp"
+                <LinearLayout
+                    android:id="@+id/filter_gamma"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_white" />
+                    android:background="?attr/selectableItemBackground">
 
-                <TextView
-                    android:text="@string/filter_white"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"/>
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_gamma" />
+
+                    <TextView
+                        android:text="@string/filter_gamma"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/filter_white"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_white" />
+
+                    <TextView
+                        android:text="@string/filter_white"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/filter_colorBalance"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_color" />
+
+                    <TextView
+                        android:text="@string/filter_colorBalance"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/button_more"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/icon_more"/>
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_monochrome"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_monochrome" />
+
+                    <TextView
+                        android:text="@string/filter_monochrome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_hue"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_hue" />
+
+                    <TextView
+                        android:text="@string/filter_hue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_rgb"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_rgb" />
+
+                    <TextView
+                        android:text="@string/filter_rgb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/filter_colorBalance"
-                android:orientation="horizontal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_gravity="center_vertical"
-                android:background="?attr/actionBarItemBackground">
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="21dp"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_sepia"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="6dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_color" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_colorBalance"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_sepia" />
+
+                    <TextView
+                        android:text="@string/filter_sepia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_haze"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_haze" />
+
+                    <TextView
+                        android:text="@string/filter_haze"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_vignette"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_vignette" />
+
+                    <TextView
+                        android:text="@string/filter_vignette"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
-        </LinearLayout>
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/button_more"
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_gravity="center_vertical"
-            android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/icon_more"/>
-
-        <LinearLayout
-            android:baselineAligned="false"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_monochrome"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
-
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_sharpen"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_monochrome" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_monochrome"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_sharpen" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_sharpen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_hue"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
+                </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_blur"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_hue" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_hue"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_blur" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_blur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_rgb"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true">
+                </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_zoom_blur"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_rgb" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_rgb"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_zoom_blur" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_zoom_blur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
 
-        </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:baselineAligned="false"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
-            android:orientation="horizontal">
+            </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_sepia"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_toon"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_sepia" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_sepia"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_cartoon" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_toon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_haze"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
+                </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_pixelation"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_haze" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_haze"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_pixel" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_pixelation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_vignette"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
+                </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_poster"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_vignette" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_vignette"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_poster" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_poster"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
 
-        </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:baselineAligned="false"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginBottom="8dp"
-            android:orientation="horizontal">
+            </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_sharpen"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true">
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_halftone"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_sharpen" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_sharpen"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_halftone" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_halftone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
 
+                </androidx.cardview.widget.CardView>
 
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_blur"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
-
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_kuwahara"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_blur" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_blur"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_kuwahara" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_kuwahara"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_zoom_blur"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
+                </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_luminance_threshold"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_zoom_blur" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_zoom_blur"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_luminance_threshold" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_luminance_threshold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
 
-        </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:baselineAligned="false"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
-            android:orientation="horizontal">
+            </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_toon"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true">
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_solarize"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_cartoon" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_toon"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_solarize" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_solarize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_pixelation"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
+                </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_emboss"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_pixel" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_pixelation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_emboss" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_emboss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_poster"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
+                </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/filter_CGA_colorspace"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_poster" />
+                    app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:text="@string/filter_poster"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/filter_colorspace" />
 
-            </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/filter_CGA_colorspace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_light"
+                        android:background="@color/color_shadow"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/button_info"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_info"
+                android:background="?attr/selectableItemBackground"/>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:baselineAligned="false"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
-            android:orientation="horizontal">
+    </androidx.core.widget.NestedScrollView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_halftone"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_halftone" />
-
-                <TextView
-                    android:text="@string/filter_halftone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_kuwahara"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_kuwahara" />
-
-                <TextView
-                    android:text="@string/filter_kuwahara"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_luminance_threshold"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_luminance_threshold" />
-
-                <TextView
-                    android:text="@string/filter_luminance_threshold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:baselineAligned="false"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_solarize"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/actionBarItemBackground"
-                android:clickable="true">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_solarize" />
-
-                <TextView
-                    android:text="@string/filter_solarize"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_emboss"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_emboss" />
-
-                <TextView
-                    android:text="@string/filter_emboss"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/filter_CGA_colorspace"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:cardUseCompatPadding="true"
-                app:elevation="0dp"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/filter_colorspace" />
-
-                <TextView
-                    android:text="@string/filter_CGA_colorspace"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:paddingStart="2dp"
-                    android:paddingEnd="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_light"
-                    android:background="@color/color_shadow"/>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/button_info"
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_gravity="center_vertical"
-            android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/icon_info"/>
-
-    </LinearLayout>
-
-</ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

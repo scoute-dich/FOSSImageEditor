@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         mGPUImageView = findViewById(R.id.gpuImage);
         mGPUImageView.setScaleType(GPUImage.ScaleType.CENTER_INSIDE);
 
-
         cropImageView = findViewById(R.id.cropImageView);
         cropBar = findViewById(R.id.cropBar);
         badged_iv_layout = findViewById(R.id.badged_iv_layout);
