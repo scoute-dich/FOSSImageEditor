@@ -3,30 +3,35 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="112dp"
+    android:minHeight="112dp"
     android:orientation="vertical"
     android:background="?android:attr/colorBackground"
     android:layout_alignParentBottom="true"
-    tools:ignore="Overdraw">
+    tools:ignore="Overdraw|ContentDescription">
 
     <LinearLayout
         android:baselineAligned="false"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
+        android:minHeight="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:orientation="horizontal">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp" >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/dialog_width"
                 android:selectAllOnFocus="true"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:hint="@string/dialog_width_hint"
@@ -37,15 +42,16 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp" >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
             <EditText
                 android:id="@+id/dialog_high"
                 android:selectAllOnFocus="true"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
                 android:imeOptions="actionDone"
                 android:inputType="number"
                 android:hint="@string/dialog_high_hint"
@@ -56,32 +62,51 @@
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:minHeight="56dp">
 
-        <Button
-            android:id="@+id/action_ok"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp"
-            android:background="?attr/selectableItemBackground"
-            android:textColor="@color/colorAccent"
-            android:text="@string/dialog_ok"/>
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:minHeight="56dp"
+            android:orientation="horizontal">
 
-        <Button android:id="@+id/action_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toStartOf="@+id/action_ok"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp"
-            android:background="?attr/selectableItemBackground"
-            android:textColor="@color/colorAccent"
-            android:text="@string/dialog_cancel"/>
+            <ImageButton
+                android:id="@+id/button_reset"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/icon_right"/>
 
-    </RelativeLayout>
+            <ImageButton
+                android:id="@+id/button_apply_not"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/action_cancel" />
+
+            <ImageButton
+                android:id="@+id/button_apply"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/action_check" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
 </LinearLayout>

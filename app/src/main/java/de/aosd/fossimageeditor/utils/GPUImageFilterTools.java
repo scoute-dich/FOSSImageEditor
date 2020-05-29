@@ -28,6 +28,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 
@@ -40,7 +41,7 @@ import java.util.List;
 
 public class GPUImageFilterTools {
 
-    public static void showDialog (final Context context, final OnGpuImageFilterChosenListener listener) {
+    public static void showDialog (final Context context, final TextView textview, final OnGpuImageFilterChosenListener listener) {
 
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(context);
         final View dialogView = View.inflate(context, R.layout.dialog_filter, null);
@@ -51,6 +52,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.SATURATION));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_saturation));
             }
         });
         LinearLayout menu_filter_exposure = dialogView.findViewById(R.id.filter_exposure);
@@ -59,6 +62,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.EXPOSURE));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_exposure));
             }
         });
         LinearLayout menu_filter_contrast = dialogView.findViewById(R.id.filter_contrast);
@@ -67,6 +72,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.CONTRAST));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_contrast));
             }
         });
         LinearLayout menu_filter_white = dialogView.findViewById(R.id.filter_white);
@@ -75,6 +82,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.WHITE_BALANCE));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_white));
             }
         });
         CardView menu_filter_hue = dialogView.findViewById(R.id.filter_hue);
@@ -83,6 +92,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.HUE));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_hue));
             }
         });
         LinearLayout menu_filter_gamma = dialogView.findViewById(R.id.filter_gamma);
@@ -91,6 +102,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.GAMMA));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_gamma));
             }
         });
         LinearLayout menu_filter_colorBalance = dialogView.findViewById(R.id.filter_colorBalance);
@@ -99,6 +112,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.COLOR_BALANCE));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_colorBalance));
             }
         });
         CardView menu_filter_sepia = dialogView.findViewById(R.id.filter_sepia);
@@ -107,6 +122,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.SEPIA));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_sepia));
             }
         });
         CardView menu_filter_rgb = dialogView.findViewById(R.id.filter_rgb);
@@ -115,6 +132,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.RGB));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_rgb));
             }
         });
         CardView menu_filter_haze = dialogView.findViewById(R.id.filter_haze);
@@ -123,6 +142,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.HAZE));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_haze));
             }
         });
         CardView menu_filter_vignette = dialogView.findViewById(R.id.filter_vignette);
@@ -131,6 +152,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.VIGNETTE));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_vignette));
             }
         });
         CardView menu_filter_blur = dialogView.findViewById(R.id.filter_blur);
@@ -139,6 +162,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.GAUSSIAN_BLUR));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_blur));
             }
         });
         CardView menu_filter_sharpen = dialogView.findViewById(R.id.filter_sharpen);
@@ -147,6 +172,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.SHARPEN));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_sharpen));
             }
         });
         CardView menu_filter_toon = dialogView.findViewById(R.id.filter_toon);
@@ -155,6 +182,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.TOON));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_toon));
             }
         });
         CardView menu_filter_monochrome = dialogView.findViewById(R.id.filter_monochrome);
@@ -163,6 +192,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.MONOCHROME));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_monochrome));
             }
         });
         CardView menu_filter_solarize = dialogView.findViewById(R.id.filter_solarize);
@@ -171,6 +202,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.SOLARIZE));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_solarize));
             }
         });
         CardView menu_filter_halftone = dialogView.findViewById(R.id.filter_halftone);
@@ -179,6 +212,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.HALFTONE));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_halftone));
             }
         });
         CardView menu_filter_poster = dialogView.findViewById(R.id.filter_poster);
@@ -187,6 +222,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.POSTERIZE));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_poster));
             }
         });
         CardView menu_filter_pixel = dialogView.findViewById(R.id.filter_pixelation);
@@ -195,6 +232,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.PIXELATION));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_pixelation));
             }
         });
         CardView menu_filter_kuwahara = dialogView.findViewById(R.id.filter_kuwahara);
@@ -203,6 +242,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.KUWAHARA));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_kuwahara));
             }
         });
         CardView menu_filter_luminance_threshold = dialogView.findViewById(R.id.filter_luminance_threshold);
@@ -211,6 +252,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.LUMINANCE_THRESHSOLD));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_luminance_threshold));
             }
         });
         CardView menu_filter_emboss = dialogView.findViewById(R.id.filter_emboss);
@@ -219,6 +262,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.EMBOSS));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_emboss));
             }
         });
         CardView menu_filter_CGA_colorspace = dialogView.findViewById(R.id.filter_CGA_colorspace);
@@ -227,6 +272,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.CGA_COLORSPACE));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_CGA_colorspace));
             }
         });
         CardView menu_filter_zoom_blur = dialogView.findViewById(R.id.filter_zoom_blur);
@@ -235,6 +282,8 @@ public class GPUImageFilterTools {
             public void onClick(View view) {
                 listener.onGpuImageFilterChosenListener(createFilterForType(context, FilterType.ZOOM_BLUR));
                 bottomSheetDialog.cancel();
+                textview.setVisibility(View.VISIBLE);
+                textview.setText(context.getString(R.string.filter_zoom_blur));
             }
         });
 

@@ -7,7 +7,6 @@
     <string name="action_about_license">Lizenz</string>
     <string name="action_about_contribute">Mitmachen</string>
     <string name="action_about_help">Hilfe</string>
-    <string name="action_hide">Verstecke / Zeige Launchericon</string>
 
     // Filter
 
@@ -27,7 +26,6 @@
     <string name="filter_toon">Cartoon</string>
     <string name="filter_poster">Poster</string>
     <string name="filter_halftone">Halbton</string>
-    <string name="filter_invert">Invert</string>
     <string name="filter_pixelation">Pixel</string>
     <string name="filter_solarize">Solarize</string>
     <string name="filter_emboss">Emboss</string>
@@ -44,6 +42,7 @@
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">Abbrechen</string>
     <string name="dialog_color">Farbe auswählen</string>
+    <string name="dialog_noInput">Bitte etwas eingeben</string>
 
     <string name="dialog_save_ok">Bild gespeichert.</string>
     <string name="dialog_save_not">Konnte Bild nicht speichern.</string>

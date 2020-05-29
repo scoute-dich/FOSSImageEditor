@@ -1,5 +1,6 @@
 package de.aosd.fossimageeditor;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 
 import android.content.ContentResolver;
@@ -7,6 +8,8 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.net.Uri;
@@ -26,6 +29,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,6 +37,8 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.klinker.android.badged_imageview.BadgedImageView;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -92,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         StrictMode.setVmPolicy(builder.build());
 
         setContentView(R.layout.activity_main);
+        final TextView textView = findViewById(R.id.textView);
 
         activity = MainActivity.this;
 
@@ -115,6 +122,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             @Override
             public void onClick(View v) {
                 applyFilter();
+                textView.setVisibility(View.GONE);
             }
         });
 
@@ -127,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 filterApply.setEnabled(false);
                 filterCancel.setEnabled(false);
                 seekBar.setEnabled(false);
+                textView.setVisibility(View.GONE);
             }
         });
 
@@ -138,7 +147,10 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         if (Intent.ACTION_SEND.equals(action) && type != null && type.startsWith("image/")) {
             uriSource = intent.getParcelableExtra(Intent.EXTRA_STREAM);
             handleImage();
-        } else if ("android.intent.action.EDIT".equals(action) && type != null && type.startsWith("image/")) {
+        } else if (Intent.ACTION_EDIT.equals(action) && type != null && type.startsWith("image/")) {
+            uriSource = intent.getData();
+            handleImage();
+        } else if ("com.android.camera.action.CROP".equals(action) && type != null && type.startsWith("image/")) {
             uriSource = intent.getData();
             handleImage();
         }
@@ -147,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         button_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                GPUImageFilterTools.showDialog(activity, new GPUImageFilterTools.OnGpuImageFilterChosenListener() {
+                GPUImageFilterTools.showDialog(activity, textView, new GPUImageFilterTools.OnGpuImageFilterChosenListener() {
                     @Override
                     public void onGpuImageFilterChosenListener(final GPUImageFilter filter) {
                         switchFilterTo(filter);
@@ -167,68 +179,131 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                     cropBar.setVisibility(View.VISIBLE);
                     cropImageView.setVisibility(View.VISIBLE);
                     mGPUImageView.setVisibility(View.INVISIBLE);
-                    Button button_1_1 = findViewById(R.id.button_1_1);
+
+                    final Button button_1_1 = findViewById(R.id.button_1_1);
+                    final Button button_4_3 = findViewById(R.id.button_4_3);
+                    final Button button_3_4 = findViewById(R.id.button_3_4);
+                    final Button button_16_9 = findViewById(R.id.button_16_9);
+                    final Button button_9_16 = findViewById(R.id.button_9_16);
+                    final Button button_custom = findViewById(R.id.button_custom);
+                    button_custom.setTextColor(getResources().getColor(R.color.colorAccent, null));
+
+                    TypedValue typedValue = new TypedValue();
+                    Resources.Theme theme = getTheme();
+                    theme.resolveAttribute(android.R.attr.textColorPrimary, typedValue, true);
+                    @SuppressLint("Recycle")
+                    TypedArray arr = obtainStyledAttributes(typedValue.data, new int[]{android.R.attr.textColorPrimary});
+                    final int color = arr.getColor(0, -1);
+
                     button_1_1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             cropImageView.setAspectRatio(1,1);
+                            button_1_1.setTextColor(getResources().getColor(R.color.colorAccent, null));
+                            button_4_3.setTextColor(color);
+                            button_3_4.setTextColor(color);
+                            button_16_9.setTextColor(color);
+                            button_9_16.setTextColor(color);
+                            button_custom.setTextColor(color);
                         }
                     });
-                    Button button_4_3 = findViewById(R.id.button_4_3);
                     button_4_3.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             cropImageView.setAspectRatio(4,3);
+                            button_1_1.setTextColor(color);
+                            button_4_3.setTextColor(getResources().getColor(R.color.colorAccent, null));
+                            button_3_4.setTextColor(color);
+                            button_16_9.setTextColor(color);
+                            button_9_16.setTextColor(color);
+                            button_custom.setTextColor(color);
                         }
                     });
-                    Button button_3_4 = findViewById(R.id.button_3_4);
                     button_3_4.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             cropImageView.setAspectRatio(3,4);
+                            button_1_1.setTextColor(color);
+                            button_4_3.setTextColor(color);
+                            button_3_4.setTextColor(getResources().getColor(R.color.colorAccent, null));
+                            button_16_9.setTextColor(color);
+                            button_9_16.setTextColor(color);
+                            button_custom.setTextColor(color);
                         }
                     });
-                    Button button_16_9 = findViewById(R.id.button_16_9);
                     button_16_9.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             cropImageView.setAspectRatio(16,9);
+                            button_1_1.setTextColor(color);
+                            button_4_3.setTextColor(color);
+                            button_3_4.setTextColor(color);
+                            button_16_9.setTextColor(getResources().getColor(R.color.colorAccent, null));
+                            button_9_16.setTextColor(color);
+                            button_custom.setTextColor(color);
                         }
                     });
-                    Button button_9_16 = findViewById(R.id.button_9_16);
                     button_9_16.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             cropImageView.setAspectRatio(9,16);
+                            button_1_1.setTextColor(color);
+                            button_4_3.setTextColor(color);
+                            button_3_4.setTextColor(color);
+                            button_16_9.setTextColor(color);
+                            button_9_16.setTextColor(getResources().getColor(R.color.colorAccent, null));
+                            button_custom.setTextColor(color);
                         }
                     });
-                    Button button_custom = findViewById(R.id.button_custom);
                     button_custom.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-
                             final BottomSheetDialog bottomSheetDialog_custom = new BottomSheetDialog(activity);
                             View dialogView = View.inflate(activity, R.layout.dialog_crop_custom, null);
                             final EditText dialog_width = dialogView.findViewById(R.id.dialog_width);
                             final EditText dialog_height = dialogView.findViewById(R.id.dialog_high);
-
-                            Button action_ok = dialogView.findViewById(R.id.action_ok);
+                            ImageButton action_ok = dialogView.findViewById(R.id.button_apply);
                             action_ok.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    int width = Integer.parseInt(dialog_width.getText().toString());
-                                    int height = Integer.parseInt(dialog_height.getText().toString());
-
-                                    cropImageView.setAspectRatio(width,height);
-                                    bottomSheetDialog_custom.cancel();
-
+                                    String height = dialog_height.getText().toString();
+                                    String width = dialog_width.getText().toString();
+                                    if (!height.isEmpty() && !width.isEmpty()) {
+                                        int w = Integer.parseInt(width);
+                                        int h = Integer.parseInt(height);
+                                        cropImageView.setAspectRatio(w,h);
+                                        bottomSheetDialog_custom.cancel();
+                                        button_1_1.setTextColor(color);
+                                        button_4_3.setTextColor(color);
+                                        button_3_4.setTextColor(color);
+                                        button_16_9.setTextColor(color);
+                                        button_9_16.setTextColor(color);
+                                        button_custom.setTextColor(getResources().getColor(R.color.colorAccent, null));
+                                    } else {
+                                        Toast.makeText(MainActivity.this, getString(R.string.dialog_noInput),
+                                                Toast.LENGTH_LONG).show();
+                                    }
                                 }
                             });
-                            Button action_cancel = dialogView.findViewById(R.id.action_cancel);
+                            ImageButton action_cancel = dialogView.findViewById(R.id.button_apply_not);
                             action_cancel.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
                                     bottomSheetDialog_custom.cancel();
+                                }
+                            });
+                            ImageButton action_reset = dialogView.findViewById(R.id.button_reset);
+                            action_reset.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    cropImageView.clearAspectRatio();
+                                    bottomSheetDialog_custom.cancel();
+                                    button_1_1.setTextColor(color);
+                                    button_4_3.setTextColor(color);
+                                    button_3_4.setTextColor(color);
+                                    button_16_9.setTextColor(color);
+                                    button_9_16.setTextColor(color);
+                                    button_custom.setTextColor(getResources().getColor(R.color.colorAccent, null));
                                 }
                             });
                             bottomSheetDialog_custom.setContentView(dialogView);

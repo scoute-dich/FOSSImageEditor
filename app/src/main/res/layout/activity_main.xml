@@ -373,6 +373,7 @@
 
         </RelativeLayout>
 
+
         <LinearLayout
             android:id="@+id/buttonsLayout"
             android:layout_marginBottom="8dp"
@@ -436,6 +437,22 @@
         </LinearLayout>
 
     </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:minHeight="56dp"
+        android:layout_marginBottom="8dp"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:background="?android:colorBackground"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"/>
 
     <RelativeLayout
         android:layout_width="match_parent"

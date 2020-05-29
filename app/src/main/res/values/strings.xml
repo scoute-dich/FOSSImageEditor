@@ -6,7 +6,6 @@
     <string name="action_about_license">License</string>
     <string name="action_about_contribute">Contribute</string>
     <string name="action_about_help">Help</string>
-    <string name="action_hide">Hide / Showlauncher icon</string>
 
     // Filter
 
@@ -26,7 +25,6 @@
     <string name="filter_toon">Cartoon</string>
     <string name="filter_poster">Poster</string>
     <string name="filter_halftone">Halftone</string>
-    <string name="filter_invert">Invert</string>
     <string name="filter_pixelation">Pixel</string>
     <string name="filter_solarize">Solarize</string>
     <string name="filter_emboss">Emboss</string>
@@ -43,6 +41,7 @@
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">Cancel</string>
     <string name="dialog_color">Choose a color</string>
+    <string name="dialog_noInput">Please give a correct input</string>
 
     <string name="dialog_save_ok">Image saved.</string>
     <string name="dialog_save_not">Could not save image.</string>
