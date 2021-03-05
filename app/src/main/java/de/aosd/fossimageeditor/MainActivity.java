@@ -175,6 +175,8 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             public void onClick(View view) {
                 try {
                     cropImageView.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
+                    cropImageView.setAspectRatio(mGPUImageView.getGPUImage().getBitmapWithFilterApplied().getWidth(),
+                            mGPUImageView.getGPUImage().getBitmapWithFilterApplied().getHeight());
                     appbar.setVisibility(View.INVISIBLE);
                     cropBar.setVisibility(View.VISIBLE);
                     cropImageView.setVisibility(View.VISIBLE);
@@ -296,7 +298,8 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                             action_reset.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    cropImageView.clearAspectRatio();
+                                    cropImageView.setAspectRatio(mGPUImageView.getGPUImage().getBitmapWithFilterApplied().getWidth(),
+                                            mGPUImageView.getGPUImage().getBitmapWithFilterApplied().getHeight());
                                     bottomSheetDialog_custom.cancel();
                                     button_1_1.setTextColor(color);
                                     button_4_3.setTextColor(color);
