@@ -1,0 +1,1625 @@
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(date 1613514664000)
++++ .idea/compiler.xml	(date 1613514664000)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="1.8" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"GradleSettings\">\n    <option name=\"linkedExternalProjectsSettings\">\n      <GradleProjectSettings>\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"modules\">\n          <set>\n            <option value=\"$PROJECT_DIR$\" />\n            <option value=\"$PROJECT_DIR$/app\" />\n          </set>\n        </option>\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\n        <option name=\"testRunner\" value=\"PLATFORM\" />\n      </GradleProjectSettings>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision c0d8a44ea02428cdd09e148c223b024134761e1e)
++++ .idea/gradle.xml	(date 1613514664000)
+@@ -1,8 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
++        <option name="delegatedBuild" value="false" />
++        <option name="testRunner" value="PLATFORM" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+         <option name="modules">
+@@ -12,7 +15,7 @@
+           </set>
+         </option>
+         <option name="resolveModulePerSourceSet" value="false" />
+-        <option name="testRunner" value="PLATFORM" />
++        <option name="useQualifiedModuleNames" value="true" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"NullableNotNullManager\">\n    <option name=\"myDefaultNullable\" value=\"android.support.annotation.Nullable\" />\n    <option name=\"myDefaultNotNull\" value=\"android.support.annotation.NonNull\" />\n    <option name=\"myNullables\">\n      <value>\n        <list size=\"12\">\n          <item index=\"0\" class=\"java.lang.String\" itemvalue=\"org.jetbrains.annotations.Nullable\" />\n          <item index=\"1\" class=\"java.lang.String\" itemvalue=\"javax.annotation.Nullable\" />\n          <item index=\"2\" class=\"java.lang.String\" itemvalue=\"javax.annotation.CheckForNull\" />\n          <item index=\"3\" class=\"java.lang.String\" itemvalue=\"edu.umd.cs.findbugs.annotations.Nullable\" />\n          <item index=\"4\" class=\"java.lang.String\" itemvalue=\"android.support.annotation.Nullable\" />\n          <item index=\"5\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.Nullable\" />\n          <item index=\"6\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.RecentlyNullable\" />\n          <item index=\"7\" class=\"java.lang.String\" itemvalue=\"android.annotation.Nullable\" />\n          <item index=\"8\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.qual.Nullable\" />\n          <item index=\"9\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NullableDecl\" />\n          <item index=\"10\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NullableType\" />\n          <item index=\"11\" class=\"java.lang.String\" itemvalue=\"com.android.annotations.Nullable\" />\n        </list>\n      </value>\n    </option>\n    <option name=\"myNotNulls\">\n      <value>\n        <list size=\"11\">\n          <item index=\"0\" class=\"java.lang.String\" itemvalue=\"org.jetbrains.annotations.NotNull\" />\n          <item index=\"1\" class=\"java.lang.String\" itemvalue=\"javax.annotation.Nonnull\" />\n          <item index=\"2\" class=\"java.lang.String\" itemvalue=\"edu.umd.cs.findbugs.annotations.NonNull\" />\n          <item index=\"3\" class=\"java.lang.String\" itemvalue=\"android.support.annotation.NonNull\" />\n          <item index=\"4\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.NonNull\" />\n          <item index=\"5\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.RecentlyNonNull\" />\n          <item index=\"6\" class=\"java.lang.String\" itemvalue=\"android.annotation.NonNull\" />\n          <item index=\"7\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.qual.NonNull\" />\n          <item index=\"8\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NonNullDecl\" />\n          <item index=\"9\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NonNullType\" />\n          <item index=\"10\" class=\"java.lang.String\" itemvalue=\"com.android.annotations.NonNull\" />\n        </list>\n      </value>\n    </option>\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_7\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision c0d8a44ea02428cdd09e148c223b024134761e1e)
++++ .idea/misc.xml	(date 1613514664000)
+@@ -39,7 +39,7 @@
+       </value>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/src/main/res/layout/dialog_filter.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ScrollView\n    android:id=\"@+id/scrollView\"\n    android:layout_width=\"wrap_content\"\n    android:layout_height=\"wrap_content\"\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    tools:ignore=\"ContentDescription\"\n    android:background=\"?android:attr/colorBackground\">\n\n    <LinearLayout\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_margin=\"6dp\"\n        android:orientation=\"vertical\"\n        android:background=\"?android:attr/colorBackground\">\n\n        <LinearLayout\n            android:baselineAligned=\"false\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"56dp\"\n            android:orientation=\"horizontal\">\n\n            <LinearLayout\n                android:id=\"@+id/filter_saturation\"\n                android:orientation=\"horizontal\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"wrap_content\"\n                android:layout_weight=\"1\"\n                android:layout_marginStart=\"8dp\"\n                android:layout_marginEnd=\"8dp\"\n                android:layout_gravity=\"center_vertical\"\n                android:background=\"?attr/actionBarItemBackground\">\n\n                <ImageView\n                    android:layout_width=\"21dp\"\n                    android:layout_height=\"match_parent\"\n                    android:layout_marginEnd=\"6dp\"\n                    android:layout_gravity=\"center_vertical\"\n                    android:src=\"@drawable/icon_saturation\" />\n\n                <TextView\n                    android:text=\"@string/filter_saturation\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAppearance=\"@style/TextAppearance.AppCompat.Medium\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center_vertical\"/>\n\n            </LinearLayout>\n\n            <LinearLayout\n                android:id=\"@+id/filter_contrast\"\n                android:orientation=\"horizontal\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"wrap_content\"\n                android:layout_weight=\"1\"\n                android:layout_marginStart=\"8dp\"\n                android:layout_marginEnd=\"8dp\"\n                android:layout_gravity=\"center_vertical\"\n                android:background=\"?attr/actionBarItemBackground\">\n\n                <ImageView\n                    android:layout_width=\"21dp\"\n                    android:layout_height=\"match_parent\"\n                    android:layout_marginEnd=\"6dp\"\n                    android:layout_gravity=\"center_vertical\"\n                    android:src=\"@drawable/icon_contrast\" />\n\n                <TextView\n                    android:text=\"@string/filter_contrast\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAppearance=\"@style/TextAppearance.AppCompat.Medium\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center_vertical\"/>\n\n            </LinearLayout>\n\n            <LinearLayout\n                android:id=\"@+id/filter_exposure\"\n                android:orientation=\"horizontal\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"wrap_content\"\n                android:layout_weight=\"1\"\n                android:layout_marginStart=\"8dp\"\n                android:layout_marginEnd=\"8dp\"\n                android:layout_gravity=\"center_vertical\"\n                android:background=\"?attr/actionBarItemBackground\">\n\n                <ImageView\n                    android:layout_width=\"21dp\"\n                    android:layout_height=\"match_parent\"\n                    android:layout_marginEnd=\"6dp\"\n                    android:layout_gravity=\"center_vertical\"\n                    android:src=\"@drawable/icon_exposure\" />\n\n                <TextView\n                    android:text=\"@string/filter_exposure\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAppearance=\"@style/TextAppearance.AppCompat.Medium\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center_vertical\"/>\n\n            </LinearLayout>\n\n        </LinearLayout>\n\n        <LinearLayout\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"56dp\"\n            android:orientation=\"horizontal\"\n            android:baselineAligned=\"false\">\n\n            <LinearLayout\n                android:id=\"@+id/filter_gamma\"\n                android:orientation=\"horizontal\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"wrap_content\"\n                android:layout_weight=\"1\"\n                android:layout_marginStart=\"8dp\"\n                android:layout_marginEnd=\"8dp\"\n                android:layout_gravity=\"center_vertical\"\n                android:background=\"?attr/actionBarItemBackground\">\n\n                <ImageView\n                    android:layout_width=\"21dp\"\n                    android:layout_height=\"match_parent\"\n                    android:layout_marginEnd=\"6dp\"\n                    android:layout_gravity=\"center_vertical\"\n                    android:src=\"@drawable/icon_gamma\" />\n\n                <TextView\n                    android:text=\"@string/filter_gamma\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAppearance=\"@style/TextAppearance.AppCompat.Medium\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center_vertical\"/>\n\n            </LinearLayout>\n\n            <LinearLayout\n                android:id=\"@+id/filter_white\"\n                android:orientation=\"horizontal\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"wrap_content\"\n                android:layout_weight=\"1\"\n                android:layout_marginStart=\"8dp\"\n                android:layout_marginEnd=\"8dp\"\n                android:layout_gravity=\"center_vertical\"\n                android:background=\"?attr/actionBarItemBackground\">\n\n                <ImageView\n                    android:layout_width=\"21dp\"\n                    android:layout_height=\"match_parent\"\n                    android:layout_marginEnd=\"6dp\"\n                    android:layout_gravity=\"center_vertical\"\n                    android:src=\"@drawable/icon_white\" />\n\n                <TextView\n                    android:text=\"@string/filter_white\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAppearance=\"@style/TextAppearance.AppCompat.Medium\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center_vertical\"/>\n\n            </LinearLayout>\n\n            <LinearLayout\n                android:id=\"@+id/filter_colorBalance\"\n                android:orientation=\"horizontal\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"wrap_content\"\n                android:layout_weight=\"1\"\n                android:layout_marginStart=\"8dp\"\n                android:layout_marginEnd=\"8dp\"\n                android:layout_gravity=\"center_vertical\"\n                android:background=\"?attr/actionBarItemBackground\">\n\n                <ImageView\n                    android:layout_width=\"21dp\"\n                    android:layout_height=\"match_parent\"\n                    android:layout_marginEnd=\"6dp\"\n                    android:layout_gravity=\"center_vertical\"\n                    android:src=\"@drawable/icon_color\" />\n\n                <TextView\n                    android:text=\"@string/filter_colorBalance\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAppearance=\"@style/TextAppearance.AppCompat.Medium\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center_vertical\"/>\n\n            </LinearLayout>\n\n        </LinearLayout>\n\n        <ImageButton\n            android:id=\"@+id/button_more\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"42dp\"\n            android:layout_marginBottom=\"12dp\"\n            android:layout_marginStart=\"8dp\"\n            android:layout_marginEnd=\"8dp\"\n            android:layout_gravity=\"center_vertical\"\n            android:background=\"?attr/actionBarItemBackground\"\n            android:src=\"@drawable/icon_more\"/>\n\n        <LinearLayout\n            android:baselineAligned=\"false\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"100dp\"\n            android:layout_marginStart=\"6dp\"\n            android:layout_marginEnd=\"6dp\"\n            android:orientation=\"horizontal\">\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_monochrome\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_monochrome\" />\n\n                <TextView\n                    android:text=\"@string/filter_monochrome\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_hue\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_hue\" />\n\n                <TextView\n                    android:text=\"@string/filter_hue\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_rgb\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/selectableItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_rgb\" />\n\n                <TextView\n                    android:text=\"@string/filter_rgb\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n        </LinearLayout>\n\n        <LinearLayout\n            android:baselineAligned=\"false\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"100dp\"\n            android:layout_marginStart=\"6dp\"\n            android:layout_marginEnd=\"6dp\"\n            android:orientation=\"horizontal\">\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_sepia\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_sepia\" />\n\n                <TextView\n                    android:text=\"@string/filter_sepia\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_haze\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_haze\" />\n\n                <TextView\n                    android:text=\"@string/filter_haze\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_vignette\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_vignette\" />\n\n                <TextView\n                    android:text=\"@string/filter_vignette\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n        </LinearLayout>\n\n        <LinearLayout\n            android:baselineAligned=\"false\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"100dp\"\n            android:layout_marginStart=\"6dp\"\n            android:layout_marginEnd=\"6dp\"\n            android:layout_marginBottom=\"8dp\"\n            android:orientation=\"horizontal\">\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_sharpen\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/selectableItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_sharpen\" />\n\n                <TextView\n                    android:text=\"@string/filter_sharpen\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_blur\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_blur\" />\n\n                <TextView\n                    android:text=\"@string/filter_blur\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_zoom_blur\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_zoom_blur\" />\n\n                <TextView\n                    android:text=\"@string/filter_zoom_blur\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n        </LinearLayout>\n\n        <LinearLayout\n            android:baselineAligned=\"false\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"100dp\"\n            android:layout_marginStart=\"6dp\"\n            android:layout_marginEnd=\"6dp\"\n            android:orientation=\"horizontal\">\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_toon\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/selectableItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_cartoon\" />\n\n                <TextView\n                    android:text=\"@string/filter_toon\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_pixelation\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_pixel\" />\n\n                <TextView\n                    android:text=\"@string/filter_pixelation\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_poster\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_poster\" />\n\n                <TextView\n                    android:text=\"@string/filter_poster\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n        </LinearLayout>\n\n        <LinearLayout\n            android:baselineAligned=\"false\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"100dp\"\n            android:layout_marginStart=\"6dp\"\n            android:layout_marginEnd=\"6dp\"\n            android:orientation=\"horizontal\">\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_halftone\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_halftone\" />\n\n                <TextView\n                    android:text=\"@string/filter_halftone\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_kuwahara\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_kuwahara\" />\n\n                <TextView\n                    android:text=\"@string/filter_kuwahara\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_luminance_threshold\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_luminance_threshold\" />\n\n                <TextView\n                    android:text=\"@string/filter_luminance_threshold\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n        </LinearLayout>\n\n        <LinearLayout\n            android:baselineAligned=\"false\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"100dp\"\n            android:layout_marginStart=\"6dp\"\n            android:layout_marginEnd=\"6dp\"\n            android:orientation=\"horizontal\">\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_solarize\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/actionBarItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_solarize\" />\n\n                <TextView\n                    android:text=\"@string/filter_solarize\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_emboss\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/selectableItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_emboss\" />\n\n                <TextView\n                    android:text=\"@string/filter_emboss\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n            <androidx.cardview.widget.CardView\n                android:id=\"@+id/filter_CGA_colorspace\"\n                android:layout_weight=\"1\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"match_parent\"\n                app:cardUseCompatPadding=\"true\"\n                app:elevation=\"0dp\"\n                android:background=\"?attr/selectableItemBackground\"\n                android:clickable=\"true\">\n\n                <ImageView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"match_parent\"\n                    android:scaleType=\"centerCrop\"\n                    android:src=\"@drawable/filter_colorspace\" />\n\n                <TextView\n                    android:text=\"@string/filter_CGA_colorspace\"\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_gravity=\"center|bottom\"\n                    android:paddingStart=\"2dp\"\n                    android:paddingEnd=\"2dp\"\n                    android:ellipsize=\"end\"\n                    android:maxLines=\"1\"\n                    android:textAlignment=\"center\"\n                    android:textColor=\"@color/color_light\"\n                    android:background=\"@color/color_shadow\"/>\n\n            </androidx.cardview.widget.CardView>\n\n        </LinearLayout>\n\n        <ImageButton\n            android:id=\"@+id/button_info\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"42dp\"\n            android:layout_marginBottom=\"12dp\"\n            android:layout_marginStart=\"8dp\"\n            android:layout_marginEnd=\"8dp\"\n            android:layout_gravity=\"center_vertical\"\n            android:background=\"?attr/actionBarItemBackground\"\n            android:src=\"@drawable/icon_info\"/>\n\n    </LinearLayout>\n\n</ScrollView>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/dialog_filter.xml	(revision c0d8a44ea02428cdd09e148c223b024134761e1e)
++++ app/src/main/res/layout/dialog_filter.xml	(date 1581333004000)
+@@ -1,855 +1,801 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ 
+-<ScrollView
+-    android:id="@+id/scrollView"
+-    android:layout_width="wrap_content"
+-    android:layout_height="wrap_content"
++<androidx.coordinatorlayout.widget.CoordinatorLayout
++    android:layout_width="fill_parent"
++    android:layout_height="match_parent"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:tools="http://schemas.android.com/tools"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
+     tools:ignore="ContentDescription"
+     android:background="?android:attr/colorBackground">
+ 
+-    <LinearLayout
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_margin="6dp"
+-        android:orientation="vertical"
+-        android:background="?android:attr/colorBackground">
++    <androidx.core.widget.NestedScrollView
++        android:id="@+id/scrollView"
++        android:layout_width="fill_parent"
++        android:layout_height="wrap_content"
++        android:layout_margin="6dp">
++
++        <LinearLayout
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            android:orientation="vertical"
++            android:baselineAligned="false">
+ 
+-        <LinearLayout
+-            android:baselineAligned="false"
+-            android:layout_width="match_parent"
+-            android:layout_height="56dp"
+-            android:orientation="horizontal">
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="56dp"
++                android:orientation="horizontal"
++                android:baselineAligned="false">
+ 
+-            <LinearLayout
+-                android:id="@+id/filter_saturation"
+-                android:orientation="horizontal"
+-                android:layout_width="0dp"
+-                android:layout_height="wrap_content"
+-                android:layout_weight="1"
+-                android:layout_marginStart="8dp"
+-                android:layout_marginEnd="8dp"
+-                android:layout_gravity="center_vertical"
+-                android:background="?attr/actionBarItemBackground">
++                <LinearLayout
++                    android:id="@+id/filter_saturation"
++                    android:orientation="horizontal"
++                    android:layout_width="0dp"
++                    android:layout_height="fill_parent"
++                    android:layout_weight="1"
++                    android:layout_marginStart="8dp"
++                    android:layout_marginEnd="8dp"
++                    android:layout_gravity="center_vertical"
++                    android:background="?attr/selectableItemBackground">
+ 
+-                <ImageView
+-                    android:layout_width="21dp"
+-                    android:layout_height="match_parent"
+-                    android:layout_marginEnd="6dp"
+-                    android:layout_gravity="center_vertical"
+-                    android:src="@drawable/icon_saturation" />
++                    <ImageView
++                        android:layout_width="21dp"
++                        android:layout_height="match_parent"
++                        android:layout_marginEnd="6dp"
++                        android:layout_gravity="center_vertical"
++                        android:src="@drawable/icon_saturation" />
+ 
+-                <TextView
+-                    android:text="@string/filter_saturation"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center_vertical"/>
++                    <TextView
++                        android:text="@string/filter_saturation"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center_vertical"/>
+ 
+-            </LinearLayout>
++                </LinearLayout>
+ 
+-            <LinearLayout
+-                android:id="@+id/filter_contrast"
+-                android:orientation="horizontal"
+-                android:layout_width="0dp"
+-                android:layout_height="wrap_content"
+-                android:layout_weight="1"
+-                android:layout_marginStart="8dp"
+-                android:layout_marginEnd="8dp"
+-                android:layout_gravity="center_vertical"
+-                android:background="?attr/actionBarItemBackground">
++                <LinearLayout
++                    android:id="@+id/filter_contrast"
++                    android:orientation="horizontal"
++                    android:layout_width="0dp"
++                    android:layout_height="fill_parent"
++                    android:layout_weight="1"
++                    android:layout_marginStart="8dp"
++                    android:layout_marginEnd="8dp"
++                    android:layout_gravity="center_vertical"
++                    android:background="?attr/selectableItemBackground">
+ 
+-                <ImageView
+-                    android:layout_width="21dp"
+-                    android:layout_height="match_parent"
+-                    android:layout_marginEnd="6dp"
+-                    android:layout_gravity="center_vertical"
+-                    android:src="@drawable/icon_contrast" />
++                    <ImageView
++                        android:layout_width="21dp"
++                        android:layout_height="match_parent"
++                        android:layout_marginEnd="6dp"
++                        android:layout_gravity="center_vertical"
++                        android:src="@drawable/icon_contrast" />
+ 
+-                <TextView
+-                    android:text="@string/filter_contrast"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center_vertical"/>
++                    <TextView
++                        android:text="@string/filter_contrast"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center_vertical"/>
+ 
+-            </LinearLayout>
++                </LinearLayout>
+ 
+-            <LinearLayout
+-                android:id="@+id/filter_exposure"
+-                android:orientation="horizontal"
+-                android:layout_width="0dp"
+-                android:layout_height="wrap_content"
+-                android:layout_weight="1"
+-                android:layout_marginStart="8dp"
+-                android:layout_marginEnd="8dp"
+-                android:layout_gravity="center_vertical"
+-                android:background="?attr/actionBarItemBackground">
++                <LinearLayout
++                    android:id="@+id/filter_exposure"
++                    android:orientation="horizontal"
++                    android:layout_width="0dp"
++                    android:layout_height="fill_parent"
++                    android:layout_weight="1"
++                    android:layout_marginStart="8dp"
++                    android:layout_marginEnd="8dp"
++                    android:layout_gravity="center_vertical"
++                    android:background="?attr/selectableItemBackground">
+ 
+-                <ImageView
+-                    android:layout_width="21dp"
+-                    android:layout_height="match_parent"
+-                    android:layout_marginEnd="6dp"
+-                    android:layout_gravity="center_vertical"
+-                    android:src="@drawable/icon_exposure" />
++                    <ImageView
++                        android:layout_width="21dp"
++                        android:layout_height="match_parent"
++                        android:layout_marginEnd="6dp"
++                        android:layout_gravity="center_vertical"
++                        android:src="@drawable/icon_exposure" />
+ 
+-                <TextView
+-                    android:text="@string/filter_exposure"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center_vertical"/>
++                    <TextView
++                        android:text="@string/filter_exposure"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center_vertical"/>
+ 
+-            </LinearLayout>
++                </LinearLayout>
+ 
+-        </LinearLayout>
++            </LinearLayout>
+ 
+-        <LinearLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="56dp"
+-            android:orientation="horizontal"
+-            android:baselineAligned="false">
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="56dp"
++                android:orientation="horizontal"
++                android:baselineAligned="false">
+ 
+-            <LinearLayout
+-                android:id="@+id/filter_gamma"
+-                android:orientation="horizontal"
+-                android:layout_width="0dp"
+-                android:layout_height="wrap_content"
+-                android:layout_weight="1"
+-                android:layout_marginStart="8dp"
+-                android:layout_marginEnd="8dp"
+-                android:layout_gravity="center_vertical"
+-                android:background="?attr/actionBarItemBackground">
++                <LinearLayout
++                    android:id="@+id/filter_gamma"
++                    android:orientation="horizontal"
++                    android:layout_width="0dp"
++                    android:layout_height="fill_parent"
++                    android:layout_weight="1"
++                    android:layout_marginStart="8dp"
++                    android:layout_marginEnd="8dp"
++                    android:layout_gravity="center_vertical"
++                    android:background="?attr/selectableItemBackground">
+ 
+-                <ImageView
+-                    android:layout_width="21dp"
+-                    android:layout_height="match_parent"
+-                    android:layout_marginEnd="6dp"
+-                    android:layout_gravity="center_vertical"
+-                    android:src="@drawable/icon_gamma" />
++                    <ImageView
++                        android:layout_width="21dp"
++                        android:layout_height="match_parent"
++                        android:layout_marginEnd="6dp"
++                        android:layout_gravity="center_vertical"
++                        android:src="@drawable/icon_gamma" />
+ 
+-                <TextView
+-                    android:text="@string/filter_gamma"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center_vertical"/>
++                    <TextView
++                        android:text="@string/filter_gamma"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center_vertical"/>
+ 
+-            </LinearLayout>
++                </LinearLayout>
+ 
+-            <LinearLayout
+-                android:id="@+id/filter_white"
+-                android:orientation="horizontal"
+-                android:layout_width="0dp"
+-                android:layout_height="wrap_content"
+-                android:layout_weight="1"
+-                android:layout_marginStart="8dp"
+-                android:layout_marginEnd="8dp"
+-                android:layout_gravity="center_vertical"
+-                android:background="?attr/actionBarItemBackground">
++                <LinearLayout
++                    android:id="@+id/filter_white"
++                    android:orientation="horizontal"
++                    android:layout_width="0dp"
++                    android:layout_height="fill_parent"
++                    android:layout_weight="1"
++                    android:layout_marginStart="8dp"
++                    android:layout_marginEnd="8dp"
++                    android:layout_gravity="center_vertical"
++                    android:background="?attr/selectableItemBackground">
+ 
+-                <ImageView
+-                    android:layout_width="21dp"
+-                    android:layout_height="match_parent"
+-                    android:layout_marginEnd="6dp"
+-                    android:layout_gravity="center_vertical"
+-                    android:src="@drawable/icon_white" />
++                    <ImageView
++                        android:layout_width="21dp"
++                        android:layout_height="match_parent"
++                        android:layout_marginEnd="6dp"
++                        android:layout_gravity="center_vertical"
++                        android:src="@drawable/icon_white" />
+ 
+-                <TextView
+-                    android:text="@string/filter_white"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center_vertical"/>
++                    <TextView
++                        android:text="@string/filter_white"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center_vertical"/>
+ 
+-            </LinearLayout>
++                </LinearLayout>
+ 
+-            <LinearLayout
+-                android:id="@+id/filter_colorBalance"
+-                android:orientation="horizontal"
+-                android:layout_width="0dp"
+-                android:layout_height="wrap_content"
+-                android:layout_weight="1"
+-                android:layout_marginStart="8dp"
+-                android:layout_marginEnd="8dp"
+-                android:layout_gravity="center_vertical"
+-                android:background="?attr/actionBarItemBackground">
++                <LinearLayout
++                    android:id="@+id/filter_colorBalance"
++                    android:orientation="horizontal"
++                    android:layout_width="0dp"
++                    android:layout_height="fill_parent"
++                    android:layout_weight="1"
++                    android:layout_marginStart="8dp"
++                    android:layout_marginEnd="8dp"
++                    android:layout_gravity="center_vertical"
++                    android:background="?attr/selectableItemBackground">
+ 
+-                <ImageView
+-                    android:layout_width="21dp"
+-                    android:layout_height="match_parent"
+-                    android:layout_marginEnd="6dp"
+-                    android:layout_gravity="center_vertical"
+-                    android:src="@drawable/icon_color" />
++                    <ImageView
++                        android:layout_width="21dp"
++                        android:layout_height="match_parent"
++                        android:layout_marginEnd="6dp"
++                        android:layout_gravity="center_vertical"
++                        android:src="@drawable/icon_color" />
+ 
+-                <TextView
+-                    android:text="@string/filter_colorBalance"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center_vertical"/>
++                    <TextView
++                        android:text="@string/filter_colorBalance"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center_vertical"/>
+ 
+-            </LinearLayout>
++                </LinearLayout>
+ 
+-        </LinearLayout>
++            </LinearLayout>
+ 
+-        <ImageButton
+-            android:id="@+id/button_more"
+-            android:layout_width="match_parent"
+-            android:layout_height="42dp"
+-            android:layout_marginBottom="12dp"
+-            android:layout_marginStart="8dp"
+-            android:layout_marginEnd="8dp"
+-            android:layout_gravity="center_vertical"
+-            android:background="?attr/actionBarItemBackground"
+-            android:src="@drawable/icon_more"/>
++            <ImageButton
++                android:id="@+id/button_more"
++                android:layout_width="fill_parent"
++                android:layout_height="42dp"
++                android:layout_gravity="center_vertical"
++                android:layout_marginBottom="2dp"
++                android:background="?attr/selectableItemBackground"
++                android:src="@drawable/icon_more"/>
+ 
+-        <LinearLayout
+-            android:baselineAligned="false"
+-            android:layout_width="match_parent"
+-            android:layout_height="100dp"
+-            android:layout_marginStart="6dp"
+-            android:layout_marginEnd="6dp"
+-            android:orientation="horizontal">
++            <LinearLayout
++                android:baselineAligned="false"
++                android:layout_width="match_parent"
++                android:layout_height="100dp"
++                android:layout_marginStart="6dp"
++                android:layout_marginEnd="6dp"
++                android:orientation="horizontal">
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_monochrome"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_monochrome"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_monochrome" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_monochrome" />
+ 
+-                <TextView
+-                    android:text="@string/filter_monochrome"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_monochrome"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_hue"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_hue"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_hue" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_hue" />
+ 
+-                <TextView
+-                    android:text="@string/filter_hue"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_hue"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_rgb"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/selectableItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_rgb"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_rgb" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_rgb" />
+ 
+-                <TextView
+-                    android:text="@string/filter_rgb"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_rgb"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-        </LinearLayout>
++            </LinearLayout>
+ 
+-        <LinearLayout
+-            android:baselineAligned="false"
+-            android:layout_width="match_parent"
+-            android:layout_height="100dp"
+-            android:layout_marginStart="6dp"
+-            android:layout_marginEnd="6dp"
+-            android:orientation="horizontal">
++            <LinearLayout
++                android:baselineAligned="false"
++                android:layout_width="match_parent"
++                android:layout_height="100dp"
++                android:layout_marginStart="6dp"
++                android:layout_marginEnd="6dp"
++                android:orientation="horizontal">
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_sepia"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_sepia"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_sepia" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_sepia" />
+ 
+-                <TextView
+-                    android:text="@string/filter_sepia"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_sepia"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_haze"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_haze"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_haze" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_haze" />
+ 
+-                <TextView
+-                    android:text="@string/filter_haze"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_haze"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_vignette"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_vignette"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_vignette" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_vignette" />
+ 
+-                <TextView
+-                    android:text="@string/filter_vignette"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_vignette"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-        </LinearLayout>
++            </LinearLayout>
+ 
+-        <LinearLayout
+-            android:baselineAligned="false"
+-            android:layout_width="match_parent"
+-            android:layout_height="100dp"
+-            android:layout_marginStart="6dp"
+-            android:layout_marginEnd="6dp"
+-            android:layout_marginBottom="8dp"
+-            android:orientation="horizontal">
++            <LinearLayout
++                android:baselineAligned="false"
++                android:layout_width="match_parent"
++                android:layout_height="100dp"
++                android:layout_marginStart="6dp"
++                android:layout_marginEnd="6dp"
++                android:orientation="horizontal">
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_sharpen"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/selectableItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_sharpen"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_sharpen" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_sharpen" />
+ 
+-                <TextView
+-                    android:text="@string/filter_sharpen"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_sharpen"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-
+-
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_blur"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_blur"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_blur" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_blur" />
+ 
+-                <TextView
+-                    android:text="@string/filter_blur"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_blur"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_zoom_blur"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_zoom_blur"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_zoom_blur" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_zoom_blur" />
+ 
+-                <TextView
+-                    android:text="@string/filter_zoom_blur"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_zoom_blur"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-        </LinearLayout>
++            </LinearLayout>
+ 
+-        <LinearLayout
+-            android:baselineAligned="false"
+-            android:layout_width="match_parent"
+-            android:layout_height="100dp"
+-            android:layout_marginStart="6dp"
+-            android:layout_marginEnd="6dp"
+-            android:orientation="horizontal">
++            <LinearLayout
++                android:baselineAligned="false"
++                android:layout_width="match_parent"
++                android:layout_height="100dp"
++                android:layout_marginStart="6dp"
++                android:layout_marginEnd="6dp"
++                android:orientation="horizontal">
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_toon"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/selectableItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_toon"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_cartoon" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_cartoon" />
+ 
+-                <TextView
+-                    android:text="@string/filter_toon"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_toon"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_pixelation"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_pixelation"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_pixel" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_pixel" />
+ 
+-                <TextView
+-                    android:text="@string/filter_pixelation"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_pixelation"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_poster"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_poster"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_poster" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_poster" />
+ 
+-                <TextView
+-                    android:text="@string/filter_poster"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_poster"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-        </LinearLayout>
++            </LinearLayout>
+ 
+-        <LinearLayout
+-            android:baselineAligned="false"
+-            android:layout_width="match_parent"
+-            android:layout_height="100dp"
+-            android:layout_marginStart="6dp"
+-            android:layout_marginEnd="6dp"
+-            android:orientation="horizontal">
++            <LinearLayout
++                android:baselineAligned="false"
++                android:layout_width="match_parent"
++                android:layout_height="100dp"
++                android:layout_marginStart="6dp"
++                android:layout_marginEnd="6dp"
++                android:orientation="horizontal">
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_halftone"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_halftone"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_halftone" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_halftone" />
+ 
+-                <TextView
+-                    android:text="@string/filter_halftone"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_halftone"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_kuwahara"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_kuwahara"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_kuwahara" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_kuwahara" />
+ 
+-                <TextView
+-                    android:text="@string/filter_kuwahara"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_kuwahara"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_luminance_threshold"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_luminance_threshold"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_luminance_threshold" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_luminance_threshold" />
+ 
+-                <TextView
+-                    android:text="@string/filter_luminance_threshold"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_luminance_threshold"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-        </LinearLayout>
++            </LinearLayout>
+ 
+-        <LinearLayout
+-            android:baselineAligned="false"
+-            android:layout_width="match_parent"
+-            android:layout_height="100dp"
+-            android:layout_marginStart="6dp"
+-            android:layout_marginEnd="6dp"
+-            android:orientation="horizontal">
++            <LinearLayout
++                android:baselineAligned="false"
++                android:layout_width="match_parent"
++                android:layout_height="100dp"
++                android:layout_marginStart="6dp"
++                android:layout_marginEnd="6dp"
++                android:orientation="horizontal">
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_solarize"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/actionBarItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_solarize"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_solarize" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_solarize" />
+ 
+-                <TextView
+-                    android:text="@string/filter_solarize"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_solarize"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_emboss"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/selectableItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_emboss"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_emboss" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_emboss" />
+ 
+-                <TextView
+-                    android:text="@string/filter_emboss"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_emboss"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-            <androidx.cardview.widget.CardView
+-                android:id="@+id/filter_CGA_colorspace"
+-                android:layout_weight="1"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                app:cardUseCompatPadding="true"
+-                app:elevation="0dp"
+-                android:background="?attr/selectableItemBackground"
+-                android:clickable="true">
++                <androidx.cardview.widget.CardView
++                    android:id="@+id/filter_CGA_colorspace"
++                    android:layout_weight="1"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    app:cardUseCompatPadding="true">
+ 
+-                <ImageView
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:scaleType="centerCrop"
+-                    android:src="@drawable/filter_colorspace" />
++                    <ImageView
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:scaleType="centerCrop"
++                        android:src="@drawable/filter_colorspace" />
+ 
+-                <TextView
+-                    android:text="@string/filter_CGA_colorspace"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_gravity="center|bottom"
+-                    android:paddingStart="2dp"
+-                    android:paddingEnd="2dp"
+-                    android:ellipsize="end"
+-                    android:maxLines="1"
+-                    android:textAlignment="center"
+-                    android:textColor="@color/color_light"
+-                    android:background="@color/color_shadow"/>
++                    <TextView
++                        android:text="@string/filter_CGA_colorspace"
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:layout_gravity="center|bottom"
++                        android:paddingStart="2dp"
++                        android:paddingEnd="2dp"
++                        android:ellipsize="end"
++                        android:maxLines="1"
++                        android:textAlignment="center"
++                        android:textColor="@color/color_light"
++                        android:background="@color/color_shadow"/>
+ 
+-            </androidx.cardview.widget.CardView>
++                </androidx.cardview.widget.CardView>
+ 
+-        </LinearLayout>
++            </LinearLayout>
+ 
+-        <ImageButton
+-            android:id="@+id/button_info"
+-            android:layout_width="match_parent"
+-            android:layout_height="42dp"
+-            android:layout_marginBottom="12dp"
+-            android:layout_marginStart="8dp"
+-            android:layout_marginEnd="8dp"
+-            android:layout_gravity="center_vertical"
+-            android:background="?attr/actionBarItemBackground"
+-            android:src="@drawable/icon_info"/>
++            <ImageButton
++                android:id="@+id/button_info"
++                android:layout_width="match_parent"
++                android:layout_height="42dp"
++                android:layout_marginBottom="2dp"
++                android:layout_marginTop="2dp"
++                android:layout_gravity="center_vertical"
++                android:src="@drawable/icon_info"
++                android:background="?attr/selectableItemBackground"/>
+ 
+-    </LinearLayout>
++        </LinearLayout>
+ 
+-</ScrollView>
+\ No newline at end of file
++    </androidx.core.widget.NestedScrollView>
++
++</androidx.coordinatorlayout.widget.CoordinatorLayout>
+\ No newline at end of file
+Index: app/src/main/java/de/aosd/fossimageeditor/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package de.aosd.fossimageeditor;\n\nimport android.app.Activity;\n\nimport android.content.ContentResolver;\nimport android.content.ContentValues;\nimport android.content.DialogInterface;\nimport android.content.Intent;\n\nimport android.graphics.Bitmap;\nimport android.graphics.Canvas;\nimport android.net.Uri;\nimport android.os.Bundle;\nimport android.os.Environment;\nimport android.os.StrictMode;\n\nimport com.flask.colorpicker.ColorPickerView;\nimport com.flask.colorpicker.OnColorSelectedListener;\nimport com.flask.colorpicker.builder.ColorPickerClickListener;\nimport com.flask.colorpicker.builder.ColorPickerDialogBuilder;\nimport com.google.android.material.bottomsheet.BottomSheetBehavior;\nimport com.google.android.material.bottomsheet.BottomSheetDialog;\n\nimport androidx.appcompat.app.AppCompatActivity;\n\nimport android.provider.MediaStore;\nimport android.text.Editable;\nimport android.text.TextWatcher;\nimport android.view.View;\nimport android.widget.Button;\nimport android.widget.EditText;\nimport android.widget.ImageButton;\nimport android.widget.LinearLayout;\nimport android.widget.RelativeLayout;\nimport android.widget.SeekBar;\n\nimport com.klinker.android.badged_imageview.BadgedImageView;\nimport com.theartofdev.edmodo.cropper.CropImageView;\n\nimport java.io.File;\nimport java.io.IOException;\nimport java.io.OutputStream;\nimport java.text.SimpleDateFormat;\nimport java.util.Date;\nimport java.util.Locale;\nimport java.util.Objects;\n\nimport cat.ereza.customactivityoncrash.config.CaocConfig;\nimport de.aosd.fossimageeditor.utils.GPUImageFilterTools;\nimport de.aosd.fossimageeditor.utils.MsgUtil;\nimport jp.co.cyberagent.android.gpuimage.GPUImage;\nimport jp.co.cyberagent.android.gpuimage.GPUImageView;\nimport jp.co.cyberagent.android.gpuimage.filter.GPUImageFilter;\n\n\npublic class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {\n\n    private Activity activity;\n    private Uri uriSource;\n\n    private ImageButton filterApply;\n    private ImageButton filterCancel;\n    private SeekBar seekBar;\n\n    private GPUImageView mGPUImageView;\n    private GPUImageFilterTools.FilterAdjuster mFilterAdjuster;\n\n    private CropImageView cropImageView;\n    private RelativeLayout cropBar;\n    private RelativeLayout badged_iv_layout;\n    private RelativeLayout textBar;\n    private RelativeLayout appbar;\n\n    private int applyFilterCount;\n    private int textColor;\n    private int badgedImageView_int;\n\n    private Uri imageUri;\n    private ImageButton button_open;\n    private ImageButton button_save;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\n        CaocConfig.Builder.create()\n                .backgroundMode(CaocConfig.BACKGROUND_MODE_SILENT) //default: CaocConfig.BACKGROUND_MODE_SHOW_CUSTOM\n                .errorActivity(InfoActivity.class) //default: null (default error activity)\n                .apply();\n\n        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();\n        StrictMode.setVmPolicy(builder.build());\n\n        setContentView(R.layout.activity_main);\n\n        activity = MainActivity.this;\n\n        seekBar = findViewById(R.id.seekBar);\n        assert seekBar != null;\n        seekBar.setOnSeekBarChangeListener(MainActivity.this);\n        seekBar.setEnabled(false);\n\n        mGPUImageView = findViewById(R.id.gpuImage);\n        mGPUImageView.setScaleType(GPUImage.ScaleType.CENTER_INSIDE);\n\n\n        cropImageView = findViewById(R.id.cropImageView);\n        cropBar = findViewById(R.id.cropBar);\n        badged_iv_layout = findViewById(R.id.badged_iv_layout);\n        textBar = findViewById(R.id.textBar);\n        appbar = findViewById(R.id.appbar);\n\n        filterApply = findViewById(R.id.filterApply);\n        filterApply.setEnabled(false);\n        filterApply.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View v) {\n                applyFilter();\n            }\n        });\n\n        filterCancel = findViewById(R.id.filterCancel);\n        filterCancel.setEnabled(false);\n        filterCancel.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View v) {\n                mGPUImageView.setFilter(new GPUImageFilter());\n                filterApply.setEnabled(false);\n                filterCancel.setEnabled(false);\n                seekBar.setEnabled(false);\n            }\n        });\n\n        // Get intent, action and MIME type\n        Intent intent = getIntent();\n        String action = intent.getAction();\n        String type = intent.getType();\n\n        if (Intent.ACTION_SEND.equals(action) && type != null && type.startsWith(\"image/\")) {\n            uriSource = intent.getParcelableExtra(Intent.EXTRA_STREAM);\n            handleImage();\n        } else if (\"android.intent.action.EDIT\".equals(action) && type != null && type.startsWith(\"image/\")) {\n            uriSource = intent.getData();\n            handleImage();\n        }\n\n        final ImageButton button_edit = findViewById(R.id.button_edit);\n        button_edit.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                GPUImageFilterTools.showDialog(activity, new GPUImageFilterTools.OnGpuImageFilterChosenListener() {\n                    @Override\n                    public void onGpuImageFilterChosenListener(final GPUImageFilter filter) {\n                        switchFilterTo(filter);\n                        mGPUImageView.requestRender();\n                    }\n                });\n            }\n        });\n\n        ImageButton button_crop = findViewById(R.id.button_crop);\n        button_crop.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                try {\n                    cropImageView.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());\n                    appbar.setVisibility(View.INVISIBLE);\n                    cropBar.setVisibility(View.VISIBLE);\n                    cropImageView.setVisibility(View.VISIBLE);\n                    mGPUImageView.setVisibility(View.INVISIBLE);\n                    Button button_1_1 = findViewById(R.id.button_1_1);\n                    button_1_1.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            cropImageView.setAspectRatio(1,1);\n                        }\n                    });\n                    Button button_4_3 = findViewById(R.id.button_4_3);\n                    button_4_3.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            cropImageView.setAspectRatio(4,3);\n                        }\n                    });\n                    Button button_3_4 = findViewById(R.id.button_3_4);\n                    button_3_4.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            cropImageView.setAspectRatio(3,4);\n                        }\n                    });\n                    Button button_16_9 = findViewById(R.id.button_16_9);\n                    button_16_9.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            cropImageView.setAspectRatio(16,9);\n                        }\n                    });\n                    Button button_9_16 = findViewById(R.id.button_9_16);\n                    button_9_16.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            cropImageView.setAspectRatio(9,16);\n                        }\n                    });\n                    Button button_custom = findViewById(R.id.button_custom);\n                    button_custom.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n\n                            final BottomSheetDialog bottomSheetDialog_custom = new BottomSheetDialog(activity);\n                            View dialogView = View.inflate(activity, R.layout.dialog_crop_custom, null);\n                            final EditText dialog_width = dialogView.findViewById(R.id.dialog_width);\n                            final EditText dialog_height = dialogView.findViewById(R.id.dialog_high);\n\n                            Button action_ok = dialogView.findViewById(R.id.action_ok);\n                            action_ok.setOnClickListener(new View.OnClickListener() {\n                                @Override\n                                public void onClick(View view) {\n                                    int width = Integer.parseInt(dialog_width.getText().toString());\n                                    int height = Integer.parseInt(dialog_height.getText().toString());\n\n                                    cropImageView.setAspectRatio(width,height);\n                                    bottomSheetDialog_custom.cancel();\n\n                                }\n                            });\n                            Button action_cancel = dialogView.findViewById(R.id.action_cancel);\n                            action_cancel.setOnClickListener(new View.OnClickListener() {\n                                @Override\n                                public void onClick(View view) {\n                                    bottomSheetDialog_custom.cancel();\n                                }\n                            });\n                            bottomSheetDialog_custom.setContentView(dialogView);\n                            bottomSheetDialog_custom.show();\n                            MsgUtil.setBottomSheetBehavior(bottomSheetDialog_custom, dialogView, BottomSheetBehavior.STATE_EXPANDED);\n                        }\n                    });\n                    ImageButton button_right = findViewById(R.id.button_right);\n                    button_right.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            cropImageView.rotateImage(90);\n                        }\n                    });\n                    ImageButton button_left = findViewById(R.id.button_left);\n                    button_left.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            cropImageView.rotateImage(270);\n                        }\n                    });\n                    ImageButton button_horizontal = findViewById(R.id.button_horizontal);\n                    button_horizontal.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            cropImageView.flipImageHorizontally();\n                        }\n                    });\n                    ImageButton button_vertical = findViewById(R.id.button_vertical);\n                    button_vertical.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            cropImageView.flipImageVertically();\n                        }\n                    });\n\n                    ImageButton button_apply_not = findViewById(R.id.button_apply_not);\n                    button_apply_not.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            appbar.setVisibility(View.VISIBLE);\n                            cropBar.setVisibility(View.INVISIBLE);\n                            cropImageView.setVisibility(View.INVISIBLE);\n                            mGPUImageView.setVisibility(View.VISIBLE);\n                        }\n                    });\n                    ImageButton button_apply = findViewById(R.id.button_apply);\n                    button_apply.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            Bitmap cropped = cropImageView.getCroppedImage();\n                            mGPUImageView.setImage(cropped);\n                            appbar.setVisibility(View.VISIBLE);\n                            cropBar.setVisibility(View.INVISIBLE);\n                            cropImageView.setVisibility(View.INVISIBLE);\n                            mGPUImageView.setVisibility(View.VISIBLE);\n                            button_save.setEnabled(true);\n                            applyFilter();\n                        }\n                    });\n                } catch (Exception e) {\n                    e.printStackTrace();\n                    mGPUImageView.setFilter(new GPUImageFilter());\n                    mGPUImageView.requestRender();\n                    MsgUtil.show(activity, getString(R.string.dialog_loading));\n                }\n            }\n        });\n\n        ImageButton button_text = findViewById(R.id.button_text);\n        button_text.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                try {\n                    final LinearLayout textPositionLayout = findViewById(R.id.textPositionLayout);\n                    final LinearLayout textToolsLayout = findViewById(R.id.textToolsLayout);\n                    final BadgedImageView badged_iv_bottom_end = findViewById(R.id.badged_iv_bottom_end);  //4\n                    final BadgedImageView badged_iv_bottom_start = findViewById(R.id.badged_iv_bottom_start);  //3\n                    final BadgedImageView badged_iv_top_start = findViewById(R.id.badged_iv_top_start);  //1\n                    final BadgedImageView badged_iv_top_end = findViewById(R.id.badged_iv_top_end);  //2\n\n                    badged_iv_top_start.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());\n                    badged_iv_top_end.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());\n                    badged_iv_bottom_start.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());\n                    badged_iv_bottom_end.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());\n\n                    badged_iv_bottom_end.setVisibility(View.VISIBLE);\n                    badged_iv_bottom_start.setVisibility(View.INVISIBLE);\n                    badged_iv_top_end.setVisibility(View.INVISIBLE);\n                    badged_iv_top_start.setVisibility(View.INVISIBLE);\n                    badgedImageView_int = 4;\n\n                    appbar.setVisibility(View.INVISIBLE);\n                    textBar.setVisibility(View.VISIBLE);\n                    badged_iv_layout.setVisibility(View.VISIBLE);\n                    mGPUImageView.setVisibility(View.INVISIBLE);\n                    textColor = getColor(R.color.colorAccent);\n\n                    final EditText dialog_text = findViewById(R.id.dialog_text);\n                    dialog_text.addTextChangedListener(new TextWatcher() {\n                        public void afterTextChanged(Editable s) {\n                            switch(badgedImageView_int) {\n                                case 1:\n                                    badged_iv_top_start.setBadge(s.toString(), textColor);\n                                    break;\n                                case 2:\n                                    badged_iv_top_end.setBadge(s.toString(), textColor);\n                                    break;\n                                case 3:\n                                    badged_iv_bottom_start.setBadge(s.toString(), textColor);\n                                    break;\n                                case 4:\n                                    badged_iv_bottom_end.setBadge(s.toString(), textColor);\n                                    break;\n                            }\n                        }\n                        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}\n                        public void onTextChanged(CharSequence s, int start, int before, int count) {}\n                    });\n\n                    ImageButton button_textApply_not = findViewById(R.id.button_textApply_not);\n                    button_textApply_not.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            appbar.setVisibility(View.VISIBLE);\n                            textBar.setVisibility(View.INVISIBLE);\n                            badged_iv_layout.setVisibility(View.INVISIBLE);\n                            mGPUImageView.setVisibility(View.VISIBLE);\n                        }\n                    });\n                    ImageButton button_textApply = findViewById(R.id.button_textApply);\n                    button_textApply.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            switch(badgedImageView_int) {\n                                case 1:\n                                    mGPUImageView.setImage(getBitmapFromView(badged_iv_top_start));\n                                    break;\n                                case 2:\n                                    mGPUImageView.setImage(getBitmapFromView(badged_iv_top_end));\n                                    break;\n                                case 3:\n                                    mGPUImageView.setImage(getBitmapFromView(badged_iv_bottom_start));\n                                    break;\n                                case 4:\n                                    mGPUImageView.setImage(getBitmapFromView(badged_iv_bottom_end));\n                                    break;\n                            }\n                            appbar.setVisibility(View.VISIBLE);\n                            textBar.setVisibility(View.INVISIBLE);\n                            badged_iv_layout.setVisibility(View.INVISIBLE);\n                            mGPUImageView.setVisibility(View.VISIBLE);\n                            button_save.setEnabled(true);\n                            applyFilter();\n                        }\n                    });\n\n                    ImageButton button_position = findViewById(R.id.button_position);\n                    button_position.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            textToolsLayout.setVisibility(View.INVISIBLE);\n                            textPositionLayout.setVisibility(View.VISIBLE);\n\n                            ImageButton position_topLeft = findViewById(R.id.position_topLeft);\n                            position_topLeft.setOnClickListener(new View.OnClickListener() {\n                                @Override\n                                public void onClick(View view) {\n                                    textToolsLayout.setVisibility(View.VISIBLE);\n                                    textPositionLayout.setVisibility(View.INVISIBLE);\n                                    badgedImageView_int = 1;\n                                    badged_iv_bottom_end.setVisibility(View.INVISIBLE);\n                                    badged_iv_bottom_start.setVisibility(View.INVISIBLE);\n                                    badged_iv_top_end.setVisibility(View.INVISIBLE);\n                                    badged_iv_top_start.setVisibility(View.VISIBLE);\n                                    badged_iv_top_start.setBadge(dialog_text.getText().toString(), textColor);\n                                }\n                            });\n                            ImageButton position_topRight = findViewById(R.id.position_topRight);\n                            position_topRight.setOnClickListener(new View.OnClickListener() {\n                                @Override\n                                public void onClick(View view) {\n                                    textToolsLayout.setVisibility(View.VISIBLE);\n                                    textPositionLayout.setVisibility(View.INVISIBLE);\n                                    badgedImageView_int = 2;\n                                    badged_iv_bottom_end.setVisibility(View.INVISIBLE);\n                                    badged_iv_bottom_start.setVisibility(View.INVISIBLE);\n                                    badged_iv_top_end.setVisibility(View.VISIBLE);\n                                    badged_iv_top_start.setVisibility(View.INVISIBLE);\n                                    badged_iv_top_end.setBadge(dialog_text.getText().toString(), textColor);\n                                }\n                            });\n                            ImageButton position_bottomLeft = findViewById(R.id.position_bottomLeft);\n                            position_bottomLeft.setOnClickListener(new View.OnClickListener() {\n                                @Override\n                                public void onClick(View view) {\n                                    textToolsLayout.setVisibility(View.VISIBLE);\n                                    textPositionLayout.setVisibility(View.INVISIBLE);\n                                    badgedImageView_int = 3;\n                                    badged_iv_bottom_end.setVisibility(View.INVISIBLE);\n                                    badged_iv_bottom_start.setVisibility(View.VISIBLE);\n                                    badged_iv_top_end.setVisibility(View.INVISIBLE);\n                                    badged_iv_top_start.setVisibility(View.INVISIBLE);\n                                    badged_iv_bottom_start.setBadge(dialog_text.getText().toString(), textColor);\n                                }\n                            });\n                            ImageButton button_bottomRight = findViewById(R.id.button_bottomRight);\n                            button_bottomRight.setOnClickListener(new View.OnClickListener() {\n                                @Override\n                                public void onClick(View view) {\n                                    textToolsLayout.setVisibility(View.VISIBLE);\n                                    textPositionLayout.setVisibility(View.INVISIBLE);\n                                    badgedImageView_int = 4;\n                                    badged_iv_bottom_end.setVisibility(View.VISIBLE);\n                                    badged_iv_bottom_start.setVisibility(View.INVISIBLE);\n                                    badged_iv_top_end.setVisibility(View.INVISIBLE);\n                                    badged_iv_top_start.setVisibility(View.INVISIBLE);\n                                    badged_iv_bottom_end.setBadge(dialog_text.getText().toString(), textColor);\n                                }\n                            });\n                        }\n                    });\n\n                    ImageButton button_color = findViewById(R.id.button_color);\n                    button_color.setOnClickListener(new View.OnClickListener() {\n                        @Override\n                        public void onClick(View view) {\n                            ColorPickerDialogBuilder\n                                    .with(activity)\n                                    .setTitle(getString(R.string.dialog_color))\n                                    .initialColor(textColor)\n                                    .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)\n                                    .density(10)\n                                    .setOnColorSelectedListener(new OnColorSelectedListener() {\n                                        @Override\n                                        public void onColorSelected(int selectedColor) {\n                                        }\n                                    })\n                                    .setPositiveButton(getString(R.string.dialog_ok), new ColorPickerClickListener() {\n                                        @Override\n                                        public void onClick(DialogInterface dialog, int selectedColor, Integer[] allColors) {\n                                            textColor = selectedColor;\n                                            switch(badgedImageView_int) {\n                                                case 1:\n                                                    badged_iv_top_start.setBadge(dialog_text.getText().toString(), textColor);\n                                                    break;\n                                                case 2:\n                                                    badged_iv_top_end.setBadge(dialog_text.getText().toString(), textColor);\n                                                    break;\n                                                case 3:\n                                                    badged_iv_bottom_start.setBadge(dialog_text.getText().toString(), textColor);\n                                                    break;\n                                                case 4:\n                                                    badged_iv_bottom_end.setBadge(dialog_text.getText().toString(), textColor);\n                                                    break;\n                                            }\n                                        }\n                                    })\n                                    .setNegativeButton(getString(R.string.dialog_cancel), new DialogInterface.OnClickListener() {\n                                        @Override\n                                        public void onClick(DialogInterface dialog, int which) {\n                                        }\n                                    })\n                                    .build()\n                                    .show();\n                        }\n                    });\n                } catch (Exception e) {\n                    e.printStackTrace();\n                    mGPUImageView.setFilter(new GPUImageFilter());\n                    mGPUImageView.requestRender();\n                    MsgUtil.show(activity, getString(R.string.dialog_loading));\n                }\n            }\n        });\n\n        button_save = findViewById(R.id.button_save);\n        button_save.setEnabled(false);\n        button_save.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                try {\n                    saveBitmap();\n                } catch (Exception e) {\n                    e.printStackTrace();\n                    MsgUtil.show(activity, getString(R.string.dialog_save_not));\n                }\n            }\n        });\n\n        button_open = findViewById(R.id.button_open);\n        button_open.setEnabled(false);\n        button_open.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                Intent openIntent = new Intent();\n                openIntent.setAction(Intent.ACTION_VIEW);\n                openIntent.setDataAndType(imageUri, \"image/*\");\n                startActivity(openIntent);\n            }\n        });\n    }\n\n    @Override\n    public void onResume() {\n        super.onResume();\n        ContentResolver resolver = getContentResolver();\n        try {\n            OutputStream fos = resolver.openOutputStream(Objects.requireNonNull(imageUri));\n            Objects.requireNonNull(fos).close();\n            button_open.setEnabled(true);\n        } catch (Exception e) {\n            e.printStackTrace();\n            button_open.setEnabled(false);\n        }\n    }\n\n    private static Bitmap getBitmapFromView(View v) {\n        v.measure(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);\n        Bitmap b = Bitmap.createBitmap(v.getMeasuredWidth(), v.getMeasuredHeight(), Bitmap.Config.ARGB_8888);\n        Canvas c = new Canvas(b);\n        v.layout(0, 0, v.getMeasuredWidth(), v.getMeasuredHeight());\n        v.draw(c);\n        return b;\n    }\n\n    private void saveBitmap() throws IOException {\n\n        applyFilter();\n\n        Bitmap bitmap = mGPUImageView.getGPUImage().getBitmapWithFilterApplied();\n\n        String date = new SimpleDateFormat(\"yyyy-MM-dd_HH-mm-ss\", Locale.getDefault()).format(new Date());\n        String fileName = date + \".jpg\";\n\n        OutputStream fos;\n\n        ContentResolver resolver = getContentResolver();\n        ContentValues contentValues = new ContentValues();\n        contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, fileName);\n        contentValues.put(MediaStore.MediaColumns.MIME_TYPE, \"image/*\");\n        contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + File.separator + \"FOSS_ImageEditor\");\n        imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);\n        fos = resolver.openOutputStream(Objects.requireNonNull(imageUri));\n\n        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);\n        Objects.requireNonNull(fos).flush();\n        fos.close();\n\n        mGPUImageView.setFilter(new GPUImageFilter());\n        mGPUImageView.setImage(bitmap);\n        filterApply.setEnabled(false);\n        filterCancel.setEnabled(false);\n        button_open.setEnabled(true);\n        seekBar.setEnabled(false);\n        MsgUtil.show(activity, getString(R.string.dialog_save_ok));\n    }\n\n    private void switchFilterTo(final GPUImageFilter filter) {\n        mGPUImageView.setFilter(filter);\n        mFilterAdjuster = new GPUImageFilterTools.FilterAdjuster(filter);\n\n        filterApply.setEnabled(true);\n        filterCancel.setEnabled(true);\n\n        if (mFilterAdjuster.canAdjust()) {\n            seekBar.setEnabled(true);\n            mGPUImageView.requestRender();\n        } else {\n            seekBar.setEnabled(false);\n            mGPUImageView.requestRender();\n        }\n    }\n\n    private void applyFilter() {\n        if (applyFilterCount == 0) {\n            try {\n                Bitmap bitmap = mGPUImageView.getGPUImage().getBitmapWithFilterApplied();\n                mGPUImageView.setImage(bitmap);\n                mGPUImageView.setFilter(new GPUImageFilter());\n                applyFilterCount = 1;\n                applyFilter();\n                button_save.setEnabled(true);\n            } catch (Exception e) {\n                e.printStackTrace();\n                MsgUtil.show(activity, getString(R.string.dialog_save_not));\n            }\n        } else {\n            Bitmap bitmap = mGPUImageView.getGPUImage().getBitmapWithFilterApplied();\n            mGPUImageView.setImage(bitmap);\n            mGPUImageView.setFilter(new GPUImageFilter());\n            button_save.setEnabled(true);\n        }\n        filterApply.setEnabled(false);\n        filterCancel.setEnabled(false);\n        seekBar.setEnabled(false);\n    }\n\n    private void handleImage() {\n        if (uriSource != null) {\n            try {\n                applyFilterCount = 0;\n                mGPUImageView.setFilter(new GPUImageFilter());\n                seekBar.setEnabled(false);\n                mGPUImageView.setImage(uriSource);\n            } catch (Exception e) {\n                e.printStackTrace();\n                MsgUtil.show(activity, getString(R.string.dialog_load_not));\n            }\n        } else {\n            MsgUtil.show(activity, getString(R.string.dialog_load_not));\n        }\n    }\n\n    @Override\n    public void onProgressChanged(final SeekBar seekBar, final int progress, final boolean fromUser) {\n        if (mFilterAdjuster != null) {\n            mFilterAdjuster.adjust(progress);\n        }\n        mGPUImageView.requestRender();\n    }\n\n    @Override\n    public void onStartTrackingTouch(final SeekBar seekBar) {\n    }\n\n    @Override\n    public void onStopTrackingTouch(final SeekBar seekBar) {\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/de/aosd/fossimageeditor/MainActivity.java	(revision c0d8a44ea02428cdd09e148c223b024134761e1e)
++++ app/src/main/java/de/aosd/fossimageeditor/MainActivity.java	(date 1581332639000)
+@@ -103,7 +103,6 @@
+         mGPUImageView = findViewById(R.id.gpuImage);
+         mGPUImageView.setScaleType(GPUImage.ScaleType.CENTER_INSIDE);
+ 
+-
+         cropImageView = findViewById(R.id.cropImageView);
+         cropBar = findViewById(R.id.cropBar);
+         badged_iv_layout = findViewById(R.id.badged_iv_layout);

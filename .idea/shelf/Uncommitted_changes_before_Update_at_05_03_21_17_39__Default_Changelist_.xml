@@ -1,0 +1,184 @@
+<changelist name="Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]" date="1614962403179" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 05.03.21 17:39 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/caches/gradle_models.ser" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/gradle_models.ser" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/ic_launcher_round.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/caches/build_file_checksums.ser" />
+    <option name="AFTER_PATH" value=".idea/caches/build_file_checksums.ser" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/build_file_checksums.ser" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_hue.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_hue.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_hue.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_sharpen.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_sharpen.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_sharpen.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/mipmap-hdpi/ic_launcher.png" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-hdpi/ic_launcher.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/ic_launcher.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_blur.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_blur.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_blur.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_invert.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_invert.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_invert.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_haze.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_haze.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_haze.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/ic_launcher1.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_emboss.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_emboss.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_emboss.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_rgb.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_rgb.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_rgb.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_pixel.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_pixel.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_pixel.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/mipmap-mdpi/ic_launcher.png" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-mdpi/ic_launcher.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/ic_launcher2.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/ic_launcher3.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/mipmap-hdpi/ic_launcher_round.png" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-hdpi/ic_launcher_round.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/ic_launcher_round1.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_solarize.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_solarize.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_solarize.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="photo-1485178575877-1a13bf489dfe.webp" />
+    <option name="AFTER_PATH" value="photo-1485178575877-1a13bf489dfe.webp" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/photo-1485178575877-1a13bf489dfe.webp" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_vignette.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_vignette.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_vignette.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_colorspace.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_colorspace.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_colorspace.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/ic_launcher_round2.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_monochrome.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_monochrome.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_monochrome.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_zoom_blur.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_zoom_blur.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_zoom_blur.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/ic_launcher4.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="filter.jpg" />
+    <option name="AFTER_PATH" value="filter.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_luminance_threshold.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_luminance_threshold.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_luminance_threshold.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_sepia.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_sepia.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_sepia.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/mipmap-mdpi/ic_launcher_round.png" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-mdpi/ic_launcher_round.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/ic_launcher_round3.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/ic_launcher_foreground.png" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/ic_launcher_foreground.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/ic_launcher_foreground.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_kuwahara.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_kuwahara.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_kuwahara.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_cartoon.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_cartoon.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_cartoon.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_halftone.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_halftone.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_halftone.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/raw/tone_cuver_sample.acv" />
+    <option name="AFTER_PATH" value="app/src/main/res/raw/tone_cuver_sample.acv" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/tone_cuver_sample.acv" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" />
+    <option name="AFTER_PATH" value="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/ic_launcher_round4.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="gradle/wrapper/gradle-wrapper.jar" />
+    <option name="AFTER_PATH" value="gradle/wrapper/gradle-wrapper.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/gradle-wrapper.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/src/main/res/drawable-nodpi/filter_poster.jpg" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-nodpi/filter_poster.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_21_17_39_[Default_Changelist]/filter_poster.jpg" />
+  </binary>
+</changelist>
