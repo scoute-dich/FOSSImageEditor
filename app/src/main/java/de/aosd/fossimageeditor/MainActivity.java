@@ -174,9 +174,11 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             @Override
             public void onClick(View view) {
                 try {
+                    final int w = mGPUImageView.getGPUImage().getBitmapWithFilterApplied().getWidth();
+                    final int h = mGPUImageView.getGPUImage().getBitmapWithFilterApplied().getHeight();
+
                     cropImageView.setImageBitmap(mGPUImageView.getGPUImage().getBitmapWithFilterApplied());
-                    cropImageView.setAspectRatio(mGPUImageView.getGPUImage().getBitmapWithFilterApplied().getWidth(),
-                            mGPUImageView.getGPUImage().getBitmapWithFilterApplied().getHeight());
+                    cropImageView.setAspectRatio(w,h);
                     appbar.setVisibility(View.INVISIBLE);
                     cropBar.setVisibility(View.VISIBLE);
                     cropImageView.setVisibility(View.VISIBLE);
@@ -298,8 +300,21 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                             action_reset.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    cropImageView.setAspectRatio(mGPUImageView.getGPUImage().getBitmapWithFilterApplied().getWidth(),
-                                            mGPUImageView.getGPUImage().getBitmapWithFilterApplied().getHeight());
+                                    cropImageView.clearAspectRatio();
+                                    bottomSheetDialog_custom.cancel();
+                                    button_1_1.setTextColor(color);
+                                    button_4_3.setTextColor(color);
+                                    button_3_4.setTextColor(color);
+                                    button_16_9.setTextColor(color);
+                                    button_9_16.setTextColor(color);
+                                    button_custom.setTextColor(getResources().getColor(R.color.colorAccent, null));
+                                }
+                            });
+                            ImageButton action_original = dialogView.findViewById(R.id.button_original);
+                            action_original.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    cropImageView.setAspectRatio(w, h);
                                     bottomSheetDialog_custom.cancel();
                                     button_1_1.setTextColor(color);
                                     button_4_3.setTextColor(color);
